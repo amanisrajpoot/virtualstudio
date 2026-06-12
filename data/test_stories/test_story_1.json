@@ -1,0 +1,11 @@
+{
+  "id": "test_story_1",
+  "title": "Test Story",
+  "world_id": null,
+  "character_ids": [],
+  "goal_id": null,
+  "archetype_id": null,
+  "script": "A script",
+  "created_at": "2026-06-12T23:36:42.185708",
+  "updated_at": "2026-06-12T23:36:42.186020"
+}

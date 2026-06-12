@@ -1,0 +1,49 @@
+[
+  {
+    "id": "sell_product",
+    "name": "Sell Something",
+    "category": "commerce",
+    "supported_formations": [
+      "face_to_face"
+    ],
+    "supported_worlds": []
+  },
+  {
+    "id": "argue",
+    "name": "Argue",
+    "category": "conflict",
+    "supported_formations": [
+      "face_to_face",
+      "argument_2p"
+    ],
+    "supported_worlds": []
+  },
+  {
+    "id": "prank",
+    "name": "Prank Someone",
+    "category": "comedy",
+    "supported_formations": [
+      "side_by_side",
+      "pursuit"
+    ],
+    "supported_worlds": []
+  },
+  {
+    "id": "run_away",
+    "name": "Run Away",
+    "category": "action",
+    "supported_formations": [
+      "pursuit"
+    ],
+    "supported_worlds": []
+  },
+  {
+    "id": "convince",
+    "name": "Convince Someone",
+    "category": "drama",
+    "supported_formations": [
+      "face_to_face"
+    ],
+    "supported_worlds": []
+  }
+]

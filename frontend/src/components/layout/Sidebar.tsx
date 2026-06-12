@@ -17,6 +17,10 @@ export function Sidebar() {
           <PenTool size={20} />
           <span>Story Editor</span>
         </Link>
+        <Link href="/story-graph" className="flex items-center space-x-3 p-2 rounded hover:bg-slate-800 hover:text-white">
+          <Activity size={20} />
+          <span>Semantic Graph</span>
+        </Link>
         <div className="pt-4 pb-2 text-xs uppercase text-slate-500 font-semibold">Studios</div>
         <Link href="/characters" className="flex items-center space-x-3 p-2 rounded hover:bg-slate-800 hover:text-white">
           <Users size={20} />

@@ -1,0 +1,14 @@
+{
+  "id": "cricket_ground_rivalry",
+  "name": "Cricket Ground Rivalry",
+  "category": "Sports",
+  "difficulty": "beginner",
+  "world_id": "cricket_ground",
+  "character_ids": [
+    "halku",
+    "desi_ironman"
+  ],
+  "goal_id": "argue",
+  "archetype_id": "drama",
+  "starter_script": "Halku claims he hit a six.\nDesi Ironman claims it was a catch.\nA huge fight starts on the pitch."
+}

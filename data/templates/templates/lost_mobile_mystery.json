@@ -1,0 +1,14 @@
+{
+  "id": "lost_mobile_mystery",
+  "name": "Lost Mobile Mystery",
+  "category": "Mystery",
+  "difficulty": "intermediate",
+  "world_id": "village_market",
+  "character_ids": [
+    "policeman",
+    "halku"
+  ],
+  "goal_id": "convince",
+  "archetype_id": "mystery",
+  "starter_script": "The policeman has lost his phone.\nHe tries to convince Halku that he saw someone steal it."
+}

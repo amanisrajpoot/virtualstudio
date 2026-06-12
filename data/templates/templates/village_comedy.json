@@ -1,0 +1,14 @@
+{
+  "id": "village_comedy",
+  "name": "Village Comedy",
+  "category": "Comedy",
+  "difficulty": "beginner",
+  "world_id": "village_market",
+  "character_ids": [
+    "halku",
+    "policeman"
+  ],
+  "goal_id": "sell_product",
+  "archetype_id": "comedy",
+  "starter_script": "Halku sets up a ridiculous stall in the village market.\nHe tries to sell a clearly fake item.\nThe policeman approaches, looking extremely skeptical.\nThey argue about the price."
+}

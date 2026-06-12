@@ -1,0 +1,14 @@
+{
+  "id": "wedding_chaos",
+  "name": "Wedding Chaos",
+  "category": "Festival",
+  "difficulty": "intermediate",
+  "world_id": "marriage_hall",
+  "character_ids": [
+    "sony_spark",
+    "halku"
+  ],
+  "goal_id": "argue",
+  "archetype_id": "comedy",
+  "starter_script": "Sony Spark and Halku are at a crowded marriage hall.\nThey realize they are wearing the exact same outfit.\nAn argument begins."
+}

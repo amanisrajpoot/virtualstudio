@@ -1,0 +1,22 @@
+[
+  {
+    "id": "comedy",
+    "name": "Comedy"
+  },
+  {
+    "id": "drama",
+    "name": "Drama"
+  },
+  {
+    "id": "conflict",
+    "name": "Conflict"
+  },
+  {
+    "id": "mystery",
+    "name": "Mystery"
+  },
+  {
+    "id": "action",
+    "name": "Action"
+  }
+]

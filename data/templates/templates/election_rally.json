@@ -1,0 +1,14 @@
+{
+  "id": "election_rally",
+  "name": "Election Rally",
+  "category": "Event",
+  "difficulty": "intermediate",
+  "world_id": "election_rally_ground",
+  "character_ids": [
+    "desi_ironman",
+    "policeman"
+  ],
+  "goal_id": "convince",
+  "archetype_id": "conflict",
+  "starter_script": "Desi Ironman is giving a speech.\nThe policeman tries to shut down the rally."
+}

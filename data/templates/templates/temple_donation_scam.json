@@ -1,0 +1,14 @@
+{
+  "id": "temple_donation_scam",
+  "name": "Temple Donation Scam",
+  "category": "Conflict",
+  "difficulty": "advanced",
+  "world_id": "local_temple",
+  "character_ids": [
+    "policeman",
+    "halku"
+  ],
+  "goal_id": "sell_product",
+  "archetype_id": "conflict",
+  "starter_script": "Halku is trying to collect fake donations outside the temple.\nThe policeman catches him."
+}

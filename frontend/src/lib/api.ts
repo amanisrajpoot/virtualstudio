@@ -83,4 +83,53 @@ export async function generateWorld(description: string) {
   return res.json();
 }
 
+export async function fetchTemplates() {
+  const res = await fetch(`${API_BASE}/templates`);
+  return res.json();
+}
 
+export async function fetchGoals() {
+  const res = await fetch(`${API_BASE}/goals`);
+  return res.json();
+}
+
+export async function fetchArchetypes() {
+  const res = await fetch(`${API_BASE}/archetypes`);
+  return res.json();
+}
+
+export async function generateSkeleton(data: any) {
+  const res = await fetch(`${API_BASE}/stories/generate-skeleton`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+  return res.json();
+}
+
+export async function saveStory(data: any) {
+  const res = await fetch(`${API_BASE}/stories`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+  return res.json();
+}
+
+export async function fetchStoryGraph(data: any) {
+  const res = await fetch(`${API_BASE}/graph/build`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+  return res.json();
+}
+
+export async function overrideStoryIntent(data: any) {
+  const res = await fetch(`${API_BASE}/graph/override-intent`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+  return res.json();
+}

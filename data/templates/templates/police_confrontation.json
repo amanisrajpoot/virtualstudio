@@ -1,0 +1,14 @@
+{
+  "id": "police_confrontation",
+  "name": "Police Confrontation",
+  "category": "Conflict",
+  "difficulty": "beginner",
+  "world_id": "police_chowki",
+  "character_ids": [
+    "policeman",
+    "sony_spark"
+  ],
+  "goal_id": "argue",
+  "archetype_id": "drama",
+  "starter_script": "Sony Spark enters the Police Chowki demanding justice.\nThe policeman asks for details.\nAn argument breaks out."
+}

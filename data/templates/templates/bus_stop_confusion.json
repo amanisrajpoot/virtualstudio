@@ -1,0 +1,14 @@
+{
+  "id": "bus_stop_confusion",
+  "name": "Bus Stop Confusion",
+  "category": "Comedy",
+  "difficulty": "beginner",
+  "world_id": "bus_stand",
+  "character_ids": [
+    "sony_spark",
+    "desi_ironman"
+  ],
+  "goal_id": "prank",
+  "archetype_id": "comedy",
+  "starter_script": "Sony Spark convinces Desi Ironman that the bus to Mumbai leaves from here.\nIt's actually a local village stop."
+}

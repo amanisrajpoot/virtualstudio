@@ -1,0 +1,14 @@
+{
+  "id": "panchayat_dispute",
+  "name": "Panchayat Dispute",
+  "category": "Drama",
+  "difficulty": "advanced",
+  "world_id": "panchayat_area",
+  "character_ids": [
+    "halku",
+    "desi_ironman"
+  ],
+  "goal_id": "argue",
+  "archetype_id": "drama",
+  "starter_script": "A serious land dispute is brought before the Panchayat.\nHalku and Desi Ironman argue their cases."
+}

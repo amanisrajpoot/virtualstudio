@@ -1,0 +1,14 @@
+{
+  "id": "tea_stall_gossip",
+  "name": "Tea Stall Gossip",
+  "category": "Daily Life",
+  "difficulty": "beginner",
+  "world_id": "tea_stall",
+  "character_ids": [
+    "halku",
+    "desi_ironman"
+  ],
+  "goal_id": "convince",
+  "archetype_id": "comedy",
+  "starter_script": "Halku and Desi Ironman are having tea.\nHalku tries to convince Ironman to start a new business."
+}

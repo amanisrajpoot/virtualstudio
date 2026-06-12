@@ -1,37 +1,49 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { compileStory, fetchWorlds, fetchCharacters } from "@/lib/api";
+import { compileStory, fetchWorlds, fetchCharacters, fetchTemplates, fetchGoals, fetchArchetypes, generateSkeleton } from "@/lib/api";
 import { useAppStore } from "@/lib/store";
-import { Play, Activity, Globe, Users, FileText, Info, History, Map as MapIcon, ArrowRightLeft, User, MoveRight } from "lucide-react";
+import { Play, Activity, Globe, Users, FileText, Info, History, Map as MapIcon, ArrowRightLeft, User, MoveRight, Compass, Sparkles, ChevronRight, Check } from "lucide-react";
 
 export default function EditorPage() {
   const { isDeveloperMode } = useAppStore();
-  const [story, setStory] = useState("Halku sells moonlight.\nPoliceman approaches.\nArgument begins.");
+  const [story, setStory] = useState("");
   const [semanticData, setSemanticData] = useState<any>(null);
   const [isCompiling, setIsCompiling] = useState(false);
   
   const [worlds, setWorlds] = useState<any[]>([]);
   const [characters, setCharacters] = useState<any[]>([]);
+  const [templates, setTemplates] = useState<any[]>([]);
+  const [goals, setGoals] = useState<any[]>([]);
+  const [archetypes, setArchetypes] = useState<any[]>([]);
+  
   const [selectedWorld, setSelectedWorld] = useState<string>("");
   const [selectedChars, setSelectedChars] = useState<string[]>([]);
+  const [selectedGoal, setSelectedGoal] = useState<string>("");
+  const [selectedArchetype, setSelectedArchetype] = useState<string>("");
   
   // Preview State
   const [activeBeatId, setActiveBeatId] = useState<string | null>(null);
   const [explainTab, setExplainTab] = useState<"current"|"entire">("current");
+  
+  // Editor State
+  const [editorMode, setEditorMode] = useState<"hub"|"text">("hub");
 
   useEffect(() => {
     fetchWorlds().then(d => setWorlds(d.worlds || [])).catch(() => {});
     fetchCharacters().then(d => setCharacters(d.characters || [])).catch(() => {});
+    fetchTemplates().then(d => setTemplates(d.templates || [])).catch(() => {});
+    fetchGoals().then(d => setGoals(d.goals || [])).catch(() => {});
+    fetchArchetypes().then(d => setArchetypes(d.archetypes || [])).catch(() => {});
   }, []);
 
-  const handleCompile = async () => {
+  const handleCompile = async (text: string, world: string, chars: string[]) => {
     setIsCompiling(true);
     try {
       const data = await compileStory({
-        text: story,
-        world_id: selectedWorld,
-        characters: selectedChars
+        text,
+        world_id: world,
+        characters: chars
       });
       setSemanticData(data);
       if (data.beats && data.beats.length > 0) {
@@ -44,6 +56,28 @@ export default function EditorPage() {
     }
   };
 
+  const applyTemplate = (t: any) => {
+    setSelectedWorld(t.world_id);
+    setSelectedChars(t.character_ids);
+    setSelectedGoal(t.goal_id);
+    setSelectedArchetype(t.archetype_id);
+    setStory(t.starter_script);
+    setEditorMode("text");
+    handleCompile(t.starter_script, t.world_id, t.character_ids);
+  };
+
+  const handleGenerateSkeleton = async () => {
+    if (!selectedWorld || !selectedGoal || !selectedArchetype) return;
+    const res = await generateSkeleton({
+      world_id: selectedWorld,
+      characters: selectedChars,
+      goal_id: selectedGoal,
+      archetype_id: selectedArchetype
+    });
+    setStory(res.script);
+    setEditorMode("text");
+  };
+
   const getActiveBeat = () => {
     if (!semanticData || !semanticData.beats || !activeBeatId) return null;
     return semanticData.beats.find((b: any) => b.id === activeBeatId);
@@ -54,62 +88,146 @@ export default function EditorPage() {
   return (
     <div className="flex h-full bg-slate-50 relative">
       
-      {/* Pane 1: Story Input */}
-      <div className="w-[350px] bg-white border-r border-slate-200 flex flex-col p-4 shadow-sm z-10">
-        <h2 className="text-sm font-bold text-slate-800 uppercase tracking-wider mb-4 flex items-center">
-          <FileText size={16} className="mr-2 text-indigo-500" />
-          Story Script
-        </h2>
+      {/* Pane 1: Story Input or Hub */}
+      <div className="w-[380px] bg-white border-r border-slate-200 flex flex-col p-4 shadow-sm z-10 overflow-y-auto">
         
-        <div className="space-y-3 mb-4">
-           <div className="bg-slate-50 p-2 rounded border border-slate-200 flex items-center space-x-2">
-             <Globe size={16} className="text-indigo-500 shrink-0" />
-             <select className="flex-1 outline-none text-xs bg-transparent font-medium text-slate-700" value={selectedWorld} onChange={e => setSelectedWorld(e.target.value)}>
-               <option value="">No World Selected</option>
-               {worlds.map(w => <option key={w.id} value={w.id}>{w.name}</option>)}
-             </select>
-           </div>
-           <div className="bg-slate-50 p-2 rounded border border-slate-200 flex flex-col space-y-2">
-             <div className="flex items-center space-x-2">
-               <Users size={16} className="text-teal-500 shrink-0" />
-               <select className="flex-1 outline-none text-xs bg-transparent font-medium text-slate-700" onChange={e => {if(e.target.value && !selectedChars.includes(e.target.value)) setSelectedChars([...selectedChars, e.target.value])}}>
-                 <option value="">Add Character...</option>
-                 {characters.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
-               </select>
-             </div>
-             {selectedChars.length > 0 && (
-               <div className="flex flex-wrap gap-1 mt-1">
-                 {selectedChars.map(cId => {
-                    const c = characters.find(x => x.id === cId);
-                    return (
-                      <span key={cId} className="bg-teal-50 text-teal-700 px-2 py-0.5 rounded-full text-[10px] font-medium border border-teal-100 flex items-center">
-                        {c?.name || cId}
-                        <button className="ml-1 text-teal-400 hover:text-teal-600" onClick={() => setSelectedChars(selectedChars.filter(id => id !== cId))}>×</button>
+        {editorMode === "hub" ? (
+          <div className="space-y-6">
+            <h2 className="text-xl font-bold text-slate-800">Guided Creation</h2>
+            <p className="text-sm text-slate-500">Don't know what to write? Start here.</p>
+            
+            {/* Quick Templates */}
+            <div>
+              <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 flex items-center"><Sparkles size={14} className="mr-2 text-amber-500"/> Quick Templates</h3>
+              <div className="grid grid-cols-2 gap-2">
+                {templates.filter(t => t.difficulty === "beginner").slice(0,4).map(t => (
+                  <div key={t.id} onClick={() => applyTemplate(t)} className="bg-slate-50 hover:bg-indigo-50 border border-slate-200 hover:border-indigo-300 p-3 rounded-lg cursor-pointer transition-colors group">
+                    <div className="text-xs font-bold text-slate-700 group-hover:text-indigo-700">{t.name}</div>
+                    <div className="text-[10px] text-slate-400 mt-1">{t.category}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="border-t border-slate-200 my-4"></div>
+            
+            {/* Guided Wizard */}
+            <div>
+              <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4 flex items-center"><Compass size={14} className="mr-2 text-indigo-500"/> Step-by-Step</h3>
+              
+              <div className="space-y-4">
+                <div className="bg-slate-50 p-3 rounded-lg border border-slate-200">
+                  <label className="text-xs font-bold text-slate-700 mb-2 block">1. Choose World</label>
+                  <select className="w-full outline-none text-sm bg-white border border-slate-200 rounded p-2" value={selectedWorld} onChange={e => setSelectedWorld(e.target.value)}>
+                    <option value="">Select World...</option>
+                    {worlds.map(w => <option key={w.id} value={w.id}>{w.name}</option>)}
+                  </select>
+                </div>
+                
+                <div className="bg-slate-50 p-3 rounded-lg border border-slate-200">
+                  <label className="text-xs font-bold text-slate-700 mb-2 block">2. Choose Characters</label>
+                  <select className="w-full outline-none text-sm bg-white border border-slate-200 rounded p-2 mb-2" onChange={e => {if(e.target.value && !selectedChars.includes(e.target.value)) setSelectedChars([...selectedChars, e.target.value])}}>
+                    <option value="">Add Character...</option>
+                    {characters.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
+                  </select>
+                  <div className="flex flex-wrap gap-1">
+                    {selectedChars.map(cId => (
+                      <span key={cId} className="bg-teal-50 text-teal-700 px-2 py-0.5 rounded text-xs font-medium border border-teal-100 flex items-center">
+                        {characters.find(x => x.id === cId)?.name || cId}
+                        <button className="ml-1 text-teal-400" onClick={() => setSelectedChars(selectedChars.filter(id => id !== cId))}>×</button>
                       </span>
-                    )
-                 })}
+                    ))}
+                  </div>
+                </div>
+
+                <div className="bg-slate-50 p-3 rounded-lg border border-slate-200">
+                  <label className="text-xs font-bold text-slate-700 mb-2 block">3. Choose Goal</label>
+                  <select className="w-full outline-none text-sm bg-white border border-slate-200 rounded p-2" value={selectedGoal} onChange={e => setSelectedGoal(e.target.value)}>
+                    <option value="">Select Goal...</option>
+                    {goals.map(g => <option key={g.id} value={g.id}>{g.name}</option>)}
+                  </select>
+                </div>
+
+                <div className="bg-slate-50 p-3 rounded-lg border border-slate-200">
+                  <label className="text-xs font-bold text-slate-700 mb-2 block">4. Choose Archetype</label>
+                  <select className="w-full outline-none text-sm bg-white border border-slate-200 rounded p-2" value={selectedArchetype} onChange={e => setSelectedArchetype(e.target.value)}>
+                    <option value="">Select Archetype...</option>
+                    {archetypes.map(a => <option key={a.id} value={a.id}>{a.name}</option>)}
+                  </select>
+                </div>
+                
+                <button 
+                  onClick={handleGenerateSkeleton}
+                  disabled={!selectedWorld || !selectedGoal || !selectedArchetype}
+                  className="w-full bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-300 text-white p-3 rounded shadow flex justify-center items-center space-x-2 font-medium transition-colors"
+                >
+                  <FileText size={18} />
+                  <span>Generate Skeleton</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="flex flex-col h-full">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-sm font-bold text-slate-800 uppercase tracking-wider flex items-center">
+                <FileText size={16} className="mr-2 text-indigo-500" />
+                Story Script
+              </h2>
+              <button onClick={() => setEditorMode("hub")} className="text-xs text-indigo-600 font-bold hover:underline">← Back to Hub</button>
+            </div>
+            
+            <div className="space-y-3 mb-4">
+               <div className="bg-slate-50 p-2 rounded border border-slate-200 flex items-center space-x-2">
+                 <Globe size={16} className="text-indigo-500 shrink-0" />
+                 <select className="flex-1 outline-none text-xs bg-transparent font-medium text-slate-700" value={selectedWorld} onChange={e => setSelectedWorld(e.target.value)}>
+                   <option value="">No World Selected</option>
+                   {worlds.map(w => <option key={w.id} value={w.id}>{w.name}</option>)}
+                 </select>
                </div>
-             )}
-           </div>
-        </div>
+               <div className="bg-slate-50 p-2 rounded border border-slate-200 flex flex-col space-y-2">
+                 <div className="flex items-center space-x-2">
+                   <Users size={16} className="text-teal-500 shrink-0" />
+                   <select className="flex-1 outline-none text-xs bg-transparent font-medium text-slate-700" onChange={e => {if(e.target.value && !selectedChars.includes(e.target.value)) setSelectedChars([...selectedChars, e.target.value])}}>
+                     <option value="">Add Character...</option>
+                     {characters.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
+                   </select>
+                 </div>
+                 {selectedChars.length > 0 && (
+                   <div className="flex flex-wrap gap-1 mt-1">
+                     {selectedChars.map(cId => {
+                        const c = characters.find(x => x.id === cId);
+                        return (
+                          <span key={cId} className="bg-teal-50 text-teal-700 px-2 py-0.5 rounded-full text-[10px] font-medium border border-teal-100 flex items-center">
+                            {c?.name || cId}
+                            <button className="ml-1 text-teal-400 hover:text-teal-600" onClick={() => setSelectedChars(selectedChars.filter(id => id !== cId))}>×</button>
+                          </span>
+                        )
+                     })}
+                   </div>
+                 )}
+               </div>
+            </div>
 
-        <div className="flex-1 bg-slate-50 rounded border border-slate-200 flex flex-col">
-          <textarea
-            className="flex-1 w-full p-3 resize-none outline-none text-slate-700 text-sm leading-relaxed bg-transparent"
-            value={story}
-            onChange={(e) => setStory(e.target.value)}
-            placeholder="Write your story here..."
-          />
-        </div>
+            <div className="flex-1 bg-slate-50 rounded border border-slate-200 flex flex-col">
+              <textarea
+                className="flex-1 w-full p-3 resize-none outline-none text-slate-700 text-sm leading-relaxed bg-transparent"
+                value={story}
+                onChange={(e) => setStory(e.target.value)}
+                placeholder="Write your story here..."
+              />
+            </div>
 
-        <button 
-          onClick={handleCompile}
-          disabled={isCompiling}
-          className="mt-4 bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-300 text-white px-4 py-3 rounded shadow flex justify-center items-center space-x-2 font-medium"
-        >
-          <Activity size={18} />
-          <span>{isCompiling ? "Simulating..." : "Simulate Preview"}</span>
-        </button>
+            <button 
+              onClick={() => handleCompile(story, selectedWorld, selectedChars)}
+              disabled={isCompiling}
+              className="mt-4 bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-300 text-white px-4 py-3 rounded shadow flex justify-center items-center space-x-2 font-medium transition-colors"
+            >
+              <Activity size={18} />
+              <span>{isCompiling ? "Simulating..." : "Simulate Preview"}</span>
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Pane 2: Semantic Simulator Canvas & Timeline */}
@@ -168,7 +286,6 @@ export default function EditorPage() {
                     </div>
                   </>
                 )}
-                {/* Fallback layout */}
                 {["face_to_face", "pursuit", "side_by_side"].indexOf(activeBeat.formation_visual) === -1 && (
                   <div className="text-slate-400 font-mono text-sm">Formation: {activeBeat.formation_visual}</div>
                 )}
@@ -217,8 +334,6 @@ export default function EditorPage() {
 
       {/* Pane 3: Explainability & Map */}
       <div className="w-[300px] bg-white border-l border-slate-200 flex flex-col shadow-sm z-10 overflow-y-auto">
-        
-        {/* Tabs */}
         <div className="flex border-b border-slate-100">
           <button 
             onClick={() => setExplainTab("current")}
@@ -234,9 +349,7 @@ export default function EditorPage() {
           </button>
         </div>
 
-        {/* Explain Content */}
         <div className="p-4 space-y-6">
-          
           {explainTab === "current" && activeBeat && (
             <>
               <div>
@@ -293,10 +406,8 @@ export default function EditorPage() {
           {!activeBeat && (
             <p className="text-xs text-slate-400 text-center py-4 italic">Compile story to view engine reasoning.</p>
           )}
-
         </div>
       </div>
-
     </div>
   );
 }

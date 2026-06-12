@@ -1,0 +1,9 @@
+[
+  {
+    "node_id": "b1",
+    "story_id": "test_graph_1",
+    "original_intent": "APPROACH",
+    "overridden_intent": "NEGOTIATE",
+    "timestamp": "now"
+  }
+]

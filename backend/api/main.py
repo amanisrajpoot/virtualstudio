@@ -9,15 +9,28 @@ from backend.models.character import CharacterProfile
 from backend.repositories.characters import CharacterRepository
 from backend.models.world import WorldProfile
 from backend.repositories.worlds import WorldRepository
+from backend.models.story import Story
+from backend.repositories.stories import StoryRepository
+from backend.repositories.templates import TemplateRepository
+from backend.templates.skeleton_generator import SkeletonGenerator
+from backend.models.story_graph import GraphOverride
+from backend.repositories.graph_overrides import GraphOverrideRepository
+from backend.story_graph.builder import StoryGraphBuilder
 from backend.preview.builder import PreviewCache, PreviewBuilder
 from backend.observability.tracker import telemetry
 from backend.observability.schemas import StoryHealthBreakdown
+import datetime
 
 app = FastAPI(title="StoryForge API")
 char_repo = CharacterRepository()
 world_repo = WorldRepository()
+story_repo = StoryRepository()
+template_repo = TemplateRepository()
+skeleton_gen = SkeletonGenerator()
 preview_cache = PreviewCache()
 preview_builder = PreviewBuilder(preview_cache)
+graph_repo = GraphOverrideRepository()
+graph_builder = StoryGraphBuilder(preview_builder, graph_repo)
 
 app.add_middleware(
     CORSMiddleware,
@@ -209,6 +222,79 @@ async def websocket_events(websocket: WebSocket):
             await websocket.send_json({"event_type": event, "timestamp": "now"})
     except Exception:
         pass
+
+# --- Story & Template Endpoints ---
+
+@app.get("/api/stories")
+async def list_stories():
+    return {"stories": [s.model_dump() for s in story_repo.list()]}
+
+@app.get("/api/stories/{story_id}")
+async def get_story(story_id: str):
+    story = story_repo.get(story_id)
+    if not story:
+        raise HTTPException(status_code=404, detail="Story not found")
+    return story.model_dump()
+
+@app.post("/api/stories")
+async def save_story(story: Story):
+    story.updated_at = datetime.datetime.now().isoformat()
+    story_repo.save(story)
+    return {"status": "success", "id": story.id}
+
+class GenerateSkeletonRequest(BaseModel):
+    world_id: str
+    characters: List[str]
+    goal_id: str
+    archetype_id: str
+
+@app.post("/api/stories/generate-skeleton")
+async def generate_skeleton(req: GenerateSkeletonRequest):
+    script = skeleton_gen.generate(req.world_id, req.characters, req.goal_id, req.archetype_id)
+    return {"script": script}
+
+# --- Graph Endpoints ---
+
+class GraphBuildRequest(BaseModel):
+    story_id: str
+    text: str
+    world_id: str
+    characters: List[str]
+
+@app.post("/api/graph/build")
+async def build_graph(req: GraphBuildRequest):
+    graph = graph_builder.build_graph(req.story_id, req.text, req.world_id, req.characters)
+    return graph.model_dump()
+
+class GraphOverrideRequest(BaseModel):
+    story_id: str
+    node_id: str
+    original_intent: str
+    overridden_intent: str
+
+@app.post("/api/graph/override-intent")
+async def override_intent(req: GraphOverrideRequest):
+    override = GraphOverride(
+        story_id=req.story_id,
+        node_id=req.node_id,
+        original_intent=req.original_intent,
+        overridden_intent=req.overridden_intent,
+        timestamp=datetime.datetime.now().isoformat()
+    )
+    graph_repo.save_override(override)
+    return {"status": "success"}
+
+@app.get("/api/goals")
+async def get_goals():
+    return {"goals": [g.model_dump() for g in template_repo.list_goals()]}
+
+@app.get("/api/archetypes")
+async def get_archetypes():
+    return {"archetypes": [a.model_dump() for a in template_repo.list_archetypes()]}
+
+@app.get("/api/templates")
+async def get_templates():
+    return {"templates": [t.model_dump() for t in template_repo.list_templates()]}
 
 # --- Observability Endpoints ---
 
