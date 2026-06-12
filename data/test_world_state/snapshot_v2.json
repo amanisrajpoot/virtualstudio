@@ -1,0 +1,40 @@
+{
+  "version": 2,
+  "metadata": {
+    "story_id": "story_001",
+    "episode_id": "ep_002",
+    "title": "The Transaction",
+    "created_at": "2024-01-01T08:00:00Z"
+  },
+  "entities": {
+    "halku": {
+      "id": "halku",
+      "type": "character",
+      "properties": {
+        "inventory": [
+          "moonlight_bottle_001"
+        ]
+      }
+    },
+    "moonlight_bottle_001": {
+      "id": "moonlight_bottle_001",
+      "type": "prop",
+      "properties": {
+        "owner": "halku"
+      }
+    }
+  },
+  "conditions": {
+    "weather": "clear",
+    "time_of_day": "afternoon",
+    "market_status": null
+  },
+  "events": [
+    {
+      "event_id": "evt_001",
+      "actor": "halku",
+      "action": "pickup",
+      "target": "moonlight_bottle_001"
+    }
+  ]
+}

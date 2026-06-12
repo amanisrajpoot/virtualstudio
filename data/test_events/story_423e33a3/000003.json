@@ -1,0 +1,16 @@
+{
+  "event_id": "7cb8def6-624b-4067-a39a-365bc9aaaffe",
+  "event_type": "IntentMapped",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T15:34:10.233233Z",
+  "correlation_id": "story_423e33a3",
+  "sequence_number": 3,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Mapper",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

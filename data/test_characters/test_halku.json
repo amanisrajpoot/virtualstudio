@@ -1,0 +1,39 @@
+{
+  "id": "test_halku",
+  "name": "Halku",
+  "archetype": "merchant",
+  "tags": [
+    "desi",
+    "funny"
+  ],
+  "voice_profile": {
+    "provider": "elevenlabs",
+    "profile_id": "halku_v1",
+    "language": "en-IN"
+  },
+  "behavior": {
+    "talkative": 0.8,
+    "aggressive": 0.2,
+    "energetic": 0.7,
+    "greedy": 0.6,
+    "curious": 0.5
+  },
+  "speech_style": "desi_hinglish",
+  "appearance": {
+    "description": "Green giant in kurta",
+    "concept_images": [
+      "/mock/halku_concept_1.png",
+      "/mock/halku_concept_2.png",
+      "/mock/halku_concept_3.png"
+    ],
+    "selected_concept": "/mock/halku_concept_2.png",
+    "asset_id": null
+  },
+  "relationships": [
+    {
+      "target_id": "test_policeman",
+      "type": "enemy",
+      "strength": 0.8
+    }
+  ]
+}

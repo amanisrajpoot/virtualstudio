@@ -1,0 +1,23 @@
+{
+  "event_id": "2663175f-53b8-47dc-ab4b-88566afa1a70",
+  "event_type": "DialogueGenerated",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:42:03.088615Z",
+  "correlation_id": "test_police_argument",
+  "sequence_number": 5,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Dialogue",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "tags": {
+      "speech_goal": "confront_and_accuse",
+      "emotion": "hostile",
+      "importance": "high",
+      "response_expected": true
+    }
+  }
+}

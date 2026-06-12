@@ -1,0 +1,18 @@
+{
+  "event_id": "007b46a1-6ced-4ca7-9fc8-3a8990b42c08",
+  "event_type": "GodotExportCompleted",
+  "event_category": "system",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:11:06.824964Z",
+  "correlation_id": "test_godot_lifecycle",
+  "sequence_number": 5,
+  "priority": "normal",
+  "metadata": {
+    "producer": "GodotAdapter",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "path": "mp4"
+  }
+}

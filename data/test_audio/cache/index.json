@@ -1,0 +1,9 @@
+{
+  "8ab347cec293309ef7b82264d838b1c988afb28b198c2f50930fda990eb51563": {
+    "asset_id": "aud_c737d9d0",
+    "path": "data\\test_audio\\generated\\aud_c737d9d0.wav",
+    "duration_ms": 1800,
+    "voice_profile": "police_default",
+    "checksum": "8ab347cec293309ef7b82264d838b1c988afb28b198c2f50930fda990eb51563"
+  }
+}

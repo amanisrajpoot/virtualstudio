@@ -1,0 +1,18 @@
+{
+  "event_id": "8a57ca2a-ae5e-4dbe-b9bc-a8e3e42d3e05",
+  "event_type": "StorySubmitted",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:05:15.637172Z",
+  "correlation_id": "test_missing_asset",
+  "sequence_number": 1,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Test",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "story_id": "s1"
+  }
+}

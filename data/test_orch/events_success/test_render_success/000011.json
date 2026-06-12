@@ -1,0 +1,16 @@
+{
+  "event_id": "595e2445-674e-4aaa-b6da-cf08267e001a",
+  "event_type": "RenderCompleted",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:05:15.531245Z",
+  "correlation_id": "test_render_success",
+  "sequence_number": 11,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Test",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

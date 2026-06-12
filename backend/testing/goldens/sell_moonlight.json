@@ -1,0 +1,71 @@
+[
+  {
+    "intent": "sell_product",
+    "intent_confidence": 0.9,
+    "actor": "char_halku_v1",
+    "target": "char_policeman_v1",
+    "object": null,
+    "dramatic_weight": 0.5,
+    "composition": {
+      "focus_actor": "char_halku_v1",
+      "secondary_actor": "char_policeman_v1",
+      "formation": "selling",
+      "dominant_zone": null,
+      "emotional_tone": "persuasive"
+    },
+    "blocking": [
+      {
+        "actor_id": "char_halku_v1",
+        "spatial_role": "seller",
+        "anchor_intent": "nearest_selling_zone",
+        "formation": "selling",
+        "relationship": "conversation"
+      },
+      {
+        "actor_id": "char_policeman_v1",
+        "spatial_role": "customer",
+        "anchor_intent": "target_front",
+        "formation": "selling",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "char_halku_v1",
+        "spatial_role": "seller",
+        "anchor_intent": "nearest_selling_zone",
+        "formation": "selling",
+        "relationship": "conversation",
+        "resolved_anchor": "market_stall"
+      },
+      {
+        "actor_id": "char_policeman_v1",
+        "spatial_role": "customer",
+        "anchor_intent": "target_front",
+        "formation": "selling",
+        "relationship": "conversation",
+        "resolved_anchor": "offset_target_front"
+      }
+    ],
+    "planner_reasoning": [
+      "Detected sell_product intent.",
+      "Assigned char_halku_v1 (SELLER) to NEAREST_SELLING_ZONE.",
+      "Assigned char_policeman_v1 (CUSTOMER) to TARGET_FRONT.",
+      "Resolver: Mapped AnchorIntent.NEAREST_SELLING_ZONE to 'market_stall' (type: selling_zone)."
+    ],
+    "planner_confidence": 0.95,
+    "dialogue_line": {
+      "speaker_id": "char_halku_v1",
+      "text": "<FILTERED>",
+      "language": "hinglish",
+      "tags": {
+        "speech_goal": "persuade_and_sell",
+        "emotion": "persuasive",
+        "importance": "medium",
+        "response_expected": true
+      },
+      "audio_path": "<FILTERED>",
+      "duration": "<FILTERED>"
+    }
+  }
+]

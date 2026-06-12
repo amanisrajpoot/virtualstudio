@@ -1,0 +1,18 @@
+[
+  {
+    "metric_name": "test_latency",
+    "avg": 20.0,
+    "p50": 20.0,
+    "p95": 30.0,
+    "p99": 30.0,
+    "count": 3
+  },
+  {
+    "metric_name": "percentile_test",
+    "avg": 50.5,
+    "p50": 51.0,
+    "p95": 96.0,
+    "p99": 100.0,
+    "count": 100
+  }
+]

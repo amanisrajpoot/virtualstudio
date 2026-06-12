@@ -1,0 +1,16 @@
+{
+  "event_id": "21934ae0-ca08-46f7-b499-244e1ac9e3db",
+  "event_type": "SceneResolved",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:42:03.358347Z",
+  "correlation_id": "test_overflow_failure",
+  "sequence_number": 63,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Resolver",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

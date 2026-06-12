@@ -1,0 +1,16 @@
+{
+  "event_id": "2f5a8913-88d0-4759-87b5-656906bfeb21",
+  "event_type": "StoryCompiled",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T15:34:10.219990Z",
+  "correlation_id": "story_423e33a3",
+  "sequence_number": 2,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Compiler",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

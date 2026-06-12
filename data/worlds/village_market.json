@@ -1,0 +1,70 @@
+{
+  "id": "village_market",
+  "name": "Village Market",
+  "archetype": "commercial",
+  "description": "A bustling rural market with fresh produce and gossip.",
+  "zones": [
+    {
+      "id": "market_stall",
+      "name": "Market Stall",
+      "zone_type": "selling_zone",
+      "capacity": 2,
+      "adjacent": [
+        "road",
+        "crowd_area"
+      ]
+    },
+    {
+      "id": "road",
+      "name": "Main Road",
+      "zone_type": "transit",
+      "capacity": 5,
+      "adjacent": [
+        "market_stall"
+      ]
+    },
+    {
+      "id": "crowd_area",
+      "name": "Crowd Area",
+      "zone_type": "gathering",
+      "capacity": 10,
+      "adjacent": [
+        "market_stall"
+      ]
+    }
+  ],
+  "formations": [
+    {
+      "formation_id": "SELLING",
+      "supported_zone_types": [
+        "selling_zone"
+      ]
+    }
+  ],
+  "props": [
+    {
+      "prop_id": "vegetable_cart",
+      "required": true
+    },
+    {
+      "prop_id": "tea_stall",
+      "required": false
+    }
+  ],
+  "ambience": {
+    "time_of_day": "day",
+    "weather": "clear",
+    "crowd_density": 0.8,
+    "noise_profile": "market_busy"
+  },
+  "connected_worlds": [
+    {
+      "target_world": "tea_stall",
+      "connection_type": "walking_distance"
+    },
+    {
+      "target_world": "village_street",
+      "connection_type": "road_connected"
+    }
+  ]
+}

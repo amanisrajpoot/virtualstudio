@@ -1,0 +1,18 @@
+{
+  "event_id": "a6b8bb08-acb9-40d4-a4d6-d3a302993eb8",
+  "event_type": "IntentMapped",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:42:03.037906Z",
+  "correlation_id": "test_sell_moonlight",
+  "sequence_number": 1,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Compiler",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "intent": "sell_product"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "classroom",
+  "name": "Classroom",
+  "archetype": "institutional",
+  "description": "A rural school classroom.",
+  "zones": [],
+  "formations": [],
+  "props": [],
+  "ambience": {
+    "time_of_day": "day",
+    "weather": "clear",
+    "crowd_density": 0.5,
+    "noise_profile": "ambient"
+  },
+  "connected_worlds": []
+}

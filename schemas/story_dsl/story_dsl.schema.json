@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Story DSL",
+  "description": "Human-readable representation of story intent.",
+  "type": "object",
+  "properties": {
+    "scene": {
+      "type": "string",
+      "description": "The scene asset ID from the Asset Registry"
+    },
+    "characters": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of character asset IDs used in the story"
+    },
+    "beats": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "intent": {
+            "type": "string",
+            "description": "The intent ID from the Asset Registry (e.g. intent_sell_product_v1)"
+          },
+          "actor": {
+            "type": "string",
+            "description": "The character ID performing the intent"
+          },
+          "target": {
+            "type": "string",
+            "description": "Optional target character or prop ID"
+          },
+          "dialogue": {
+            "type": "string",
+            "description": "Optional dialogue spoken during this beat"
+          }
+        },
+        "required": ["intent", "actor"]
+      }
+    }
+  },
+  "required": ["scene", "characters", "beats"]
+}

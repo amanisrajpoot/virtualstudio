@@ -1,0 +1,71 @@
+[
+  {
+    "intent": "argue",
+    "intent_confidence": 0.9,
+    "actor": "char_policeman_v1",
+    "target": "char_halku_v1",
+    "object": null,
+    "dramatic_weight": 1.0,
+    "composition": {
+      "focus_actor": "char_policeman_v1",
+      "secondary_actor": "char_halku_v1",
+      "formation": "argument_2p",
+      "dominant_zone": null,
+      "emotional_tone": "hostile"
+    },
+    "blocking": [
+      {
+        "actor_id": "char_policeman_v1",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "argument_2p",
+        "relationship": "confrontation"
+      },
+      {
+        "actor_id": "char_halku_v1",
+        "spatial_role": "target",
+        "anchor_intent": "target_front",
+        "formation": "argument_2p",
+        "relationship": "confrontation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "char_policeman_v1",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "argument_2p",
+        "relationship": "confrontation",
+        "resolved_anchor": "scene_center"
+      },
+      {
+        "actor_id": "char_halku_v1",
+        "spatial_role": "target",
+        "anchor_intent": "target_front",
+        "formation": "argument_2p",
+        "relationship": "confrontation",
+        "resolved_anchor": "offset_target_front"
+      }
+    ],
+    "planner_reasoning": [
+      "Detected argue intent.",
+      "Assigned char_policeman_v1 (FOCUS) to SCENE_CENTER.",
+      "Assigned char_halku_v1 (TARGET) to TARGET_FRONT with CONFRONTATION relationship.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.9,
+    "dialogue_line": {
+      "speaker_id": "char_policeman_v1",
+      "text": "<FILTERED>",
+      "language": "hinglish",
+      "tags": {
+        "speech_goal": "confront_and_accuse",
+        "emotion": "hostile",
+        "importance": "high",
+        "response_expected": true
+      },
+      "audio_path": "<FILTERED>",
+      "duration": "<FILTERED>"
+    }
+  }
+]

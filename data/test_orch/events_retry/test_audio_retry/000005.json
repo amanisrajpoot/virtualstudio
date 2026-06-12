@@ -1,0 +1,16 @@
+{
+  "event_id": "c420b76d-b1aa-432a-88cc-c54c775f6c82",
+  "event_type": "AudioGenerationFailed",
+  "event_category": "system",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:05:15.869798Z",
+  "correlation_id": "test_audio_retry",
+  "sequence_number": 5,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Test",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

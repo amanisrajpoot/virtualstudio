@@ -1,0 +1,16 @@
+{
+  "event_id": "771a0a49-4650-442e-9380-a8616d72aec9",
+  "event_type": "RenderPackageReceived",
+  "event_category": "system",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:11:06.992524Z",
+  "correlation_id": "test_e2e_full",
+  "sequence_number": 11,
+  "priority": "normal",
+  "metadata": {
+    "producer": "GodotAdapter",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

@@ -1,0 +1,16 @@
+{
+  "event_id": "782f1dc7-43a2-4286-afb1-4fc9f1c452da",
+  "event_type": "TimelineBuilt",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:11:06.989359Z",
+  "correlation_id": "test_e2e_full",
+  "sequence_number": 8,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Test",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

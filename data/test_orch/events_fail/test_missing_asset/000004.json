@@ -1,0 +1,19 @@
+{
+  "event_id": "a8c99076-f661-42d5-bfb2-1376536cec52",
+  "event_type": "RenderFailed",
+  "event_category": "system",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:05:15.641532Z",
+  "correlation_id": "test_missing_asset",
+  "sequence_number": 4,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Orchestrator",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "job_id": "job_315ea597",
+    "reason": "Missing visual asset."
+  }
+}

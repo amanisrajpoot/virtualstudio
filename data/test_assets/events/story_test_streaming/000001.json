@@ -1,0 +1,52 @@
+{
+  "event_id": "54127246-3f14-4381-a42d-cf5c57219457",
+  "event_type": "ManifestBuilt",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:56:52.755606Z",
+  "correlation_id": "story_test_streaming",
+  "sequence_number": 1,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Test",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "manifest": {
+      "story_id": "story_test_streaming",
+      "required_assets": [
+        "rig_human",
+        "anim_idle_police",
+        "missing_prop_123",
+        "market_ambient_audio",
+        "market_stall",
+        "char_policeman_v1",
+        "market_scene"
+      ],
+      "dependency_graph": [
+        {
+          "parent_id": "market_core",
+          "child_id": "market_scene"
+        },
+        {
+          "parent_id": "market_core",
+          "child_id": "market_stall"
+        },
+        {
+          "parent_id": "market_core",
+          "child_id": "market_ambient_audio"
+        },
+        {
+          "parent_id": "char_policeman_v1",
+          "child_id": "rig_human"
+        },
+        {
+          "parent_id": "char_policeman_v1",
+          "child_id": "anim_idle_police"
+        }
+      ],
+      "warm_starts": []
+    }
+  }
+}

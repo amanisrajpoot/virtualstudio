@@ -1,0 +1,16 @@
+{
+  "event_id": "f04a7f06-9b20-4c36-901d-d42b03569ec9",
+  "event_type": "SceneResolved",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:42:03.146300Z",
+  "correlation_id": "test_market_crowd",
+  "sequence_number": 7,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Resolver",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

@@ -1,0 +1,16 @@
+{
+  "event_id": "3720c761-266c-4122-be7b-26fe79aca966",
+  "event_type": "BeatPlanned",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:42:03.039569Z",
+  "correlation_id": "test_sell_moonlight",
+  "sequence_number": 2,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Planner",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

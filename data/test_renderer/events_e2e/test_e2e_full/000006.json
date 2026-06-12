@@ -1,0 +1,16 @@
+{
+  "event_id": "9f4ee0a8-15d9-426d-a90a-f344f1013eec",
+  "event_type": "AudioGenerated",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:11:06.987173Z",
+  "correlation_id": "test_e2e_full",
+  "sequence_number": 6,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Test",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

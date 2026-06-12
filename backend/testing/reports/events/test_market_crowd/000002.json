@@ -1,0 +1,16 @@
+{
+  "event_id": "f10823c5-b7ae-4d54-910b-9794ca260450",
+  "event_type": "BeatPlanned",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:42:03.139622Z",
+  "correlation_id": "test_market_crowd",
+  "sequence_number": 2,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Planner",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

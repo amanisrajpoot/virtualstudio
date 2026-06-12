@@ -1,0 +1,16 @@
+{
+  "event_id": "f1a1404e-05a3-4572-890e-8a02979129a7",
+  "event_type": "BeatStaged",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:42:03.087328Z",
+  "correlation_id": "test_police_argument",
+  "sequence_number": 4,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Solver",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

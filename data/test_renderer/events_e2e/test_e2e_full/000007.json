@@ -1,0 +1,16 @@
+{
+  "event_id": "a957be53-ee62-437f-ab35-e6368c5055c1",
+  "event_type": "CameraTrackGenerated",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:11:06.988362Z",
+  "correlation_id": "test_e2e_full",
+  "sequence_number": 7,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Test",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

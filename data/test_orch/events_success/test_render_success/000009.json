@@ -1,0 +1,18 @@
+{
+  "event_id": "21bd9902-ea64-4c78-9e04-44afb43f1b7e",
+  "event_type": "RenderJobReady",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:05:15.428169Z",
+  "correlation_id": "test_render_success",
+  "sequence_number": 9,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Orchestrator",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "job_id": "job_55c991f3"
+  }
+}

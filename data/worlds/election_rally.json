@@ -1,0 +1,16 @@
+{
+  "id": "election_rally",
+  "name": "Election Rally Ground",
+  "archetype": "recreational",
+  "description": "A large field with a stage.",
+  "zones": [],
+  "formations": [],
+  "props": [],
+  "ambience": {
+    "time_of_day": "day",
+    "weather": "clear",
+    "crowd_density": 0.5,
+    "noise_profile": "ambient"
+  },
+  "connected_worlds": []
+}

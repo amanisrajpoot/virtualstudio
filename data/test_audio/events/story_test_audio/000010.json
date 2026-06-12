@@ -1,0 +1,18 @@
+{
+  "event_id": "05cb6b5f-237d-4545-9fcb-94bfa115bec9",
+  "event_type": "AudioGenerationFailed",
+  "event_category": "system",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:49:00.879123Z",
+  "correlation_id": "story_test_audio",
+  "sequence_number": 10,
+  "priority": "normal",
+  "metadata": {
+    "producer": "VoiceEngine",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "error": "Invalid voice profile for actor char_unknown"
+  }
+}

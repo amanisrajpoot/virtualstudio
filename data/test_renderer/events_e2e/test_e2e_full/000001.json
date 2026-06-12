@@ -1,0 +1,16 @@
+{
+  "event_id": "31f2d373-d0de-4647-980b-2c089b804c32",
+  "event_type": "StorySubmitted",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:11:06.981205Z",
+  "correlation_id": "test_e2e_full",
+  "sequence_number": 1,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Test",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

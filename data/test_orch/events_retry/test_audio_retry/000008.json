@@ -1,0 +1,16 @@
+{
+  "event_id": "ca1e6517-ec09-47bc-9127-16e70c882536",
+  "event_type": "AudioRequested",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:05:15.879143Z",
+  "correlation_id": "test_audio_retry",
+  "sequence_number": 8,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Orchestrator_Retry",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

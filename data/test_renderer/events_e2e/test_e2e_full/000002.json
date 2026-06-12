@@ -1,0 +1,18 @@
+{
+  "event_id": "ca77f224-f3c2-4c7f-9980-7d1ec8ba5f7b",
+  "event_type": "RenderJobCreated",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:11:06.982629Z",
+  "correlation_id": "test_e2e_full",
+  "sequence_number": 2,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Orchestrator",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "job_id": "job_b8da89e1"
+  }
+}

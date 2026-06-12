@@ -1,0 +1,18 @@
+{
+  "event_id": "4c520d22-dacb-400f-804f-616d96c325d4",
+  "event_type": "AssetReady",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:56:52.766809Z",
+  "correlation_id": "story_test_streaming",
+  "sequence_number": 9,
+  "priority": "normal",
+  "metadata": {
+    "producer": "StreamingManager",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "asset_id": "anim_idle_police"
+  }
+}

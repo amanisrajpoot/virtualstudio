@@ -1,0 +1,16 @@
+{
+  "event_id": "ff538fb2-eb64-4fcf-92db-f248ca141ae2",
+  "event_type": "BeatPlanned",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:05:15.422265Z",
+  "correlation_id": "test_render_success",
+  "sequence_number": 4,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Test",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

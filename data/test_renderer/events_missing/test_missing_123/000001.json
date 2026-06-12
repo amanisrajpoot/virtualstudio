@@ -1,0 +1,18 @@
+{
+  "event_id": "8be3b364-aa04-4a07-9456-27bbf1f2657b",
+  "event_type": "AssetFailed",
+  "event_category": "system",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:11:06.603131Z",
+  "correlation_id": "test_missing_123",
+  "sequence_number": 1,
+  "priority": "normal",
+  "metadata": {
+    "producer": "GodotAdapter",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "error": "Missing Asset"
+  }
+}

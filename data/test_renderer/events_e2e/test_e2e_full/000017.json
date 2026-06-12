@@ -1,0 +1,19 @@
+{
+  "event_id": "44163475-023f-48a2-9741-bc07656b5a07",
+  "event_type": "ExportCompleted",
+  "event_category": "system",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:11:07.202917Z",
+  "correlation_id": "test_e2e_full",
+  "sequence_number": 17,
+  "priority": "normal",
+  "metadata": {
+    "producer": "ExportManager",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "job_id": "job_b8da89e1",
+    "output_path": "exports/video.mp4"
+  }
+}

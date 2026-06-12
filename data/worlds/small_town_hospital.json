@@ -1,0 +1,16 @@
+{
+  "id": "small_town_hospital",
+  "name": "Small Town Hospital",
+  "archetype": "institutional",
+  "description": "A basic medical clinic.",
+  "zones": [],
+  "formations": [],
+  "props": [],
+  "ambience": {
+    "time_of_day": "day",
+    "weather": "clear",
+    "crowd_density": 0.5,
+    "noise_profile": "ambient"
+  },
+  "connected_worlds": []
+}

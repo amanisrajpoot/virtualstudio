@@ -1,0 +1,18 @@
+{
+  "event_id": "1f1ca0eb-5176-418c-8705-c3ec1b816ead",
+  "event_type": "IntentMapped",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:42:03.083036Z",
+  "correlation_id": "test_police_argument",
+  "sequence_number": 1,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Compiler",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "intent": "argue"
+  }
+}

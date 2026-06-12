@@ -1,0 +1,18 @@
+{
+  "event_id": "2dfddc24-a228-481d-9f10-49b5088f7733",
+  "event_type": "AssetReady",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:56:52.761012Z",
+  "correlation_id": "story_test_streaming",
+  "sequence_number": 5,
+  "priority": "normal",
+  "metadata": {
+    "producer": "StreamingManager",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "asset_id": "char_policeman_v1"
+  }
+}

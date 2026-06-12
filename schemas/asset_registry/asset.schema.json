@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://storyforge.local/schemas/asset_registry/asset.schema.json",
+  "title": "StoryForge Asset",
+  "type": "object",
+  "required": ["id", "type", "name", "version", "metadata"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*_v[0-9]+$",
+      "examples": ["char_halku_v1"]
+    },
+    "type": {
+      "type": "string",
+      "enum": ["character", "scene", "prop", "animation", "voice", "camera", "intent"]
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "examples": ["1.0.0"]
+    },
+    "path": {
+      "type": ["string", "null"],
+      "description": "Godot res:// path, external object path, registry:// logical path, or null."
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

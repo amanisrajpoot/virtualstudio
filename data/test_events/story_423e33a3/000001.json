@@ -1,0 +1,18 @@
+{
+  "event_id": "1c26747f-9052-45f7-8498-25412a35352d",
+  "event_type": "StorySubmitted",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T15:34:10.203260Z",
+  "correlation_id": "story_423e33a3",
+  "sequence_number": 1,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Test",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "story": "test"
+  }
+}

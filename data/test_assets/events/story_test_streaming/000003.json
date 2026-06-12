@@ -1,0 +1,18 @@
+{
+  "event_id": "09af969a-ce97-4e71-8a65-d5499880d9bf",
+  "event_type": "AssetReady",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:56:52.758497Z",
+  "correlation_id": "story_test_streaming",
+  "sequence_number": 3,
+  "priority": "normal",
+  "metadata": {
+    "producer": "StreamingManager",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "asset_id": "rig_human"
+  }
+}

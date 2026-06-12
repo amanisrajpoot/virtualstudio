@@ -1,0 +1,12 @@
+scenario_id: police_argument
+tags: [regression, staging]
+story: |
+  Policeman confronts Halku.
+  They argue.
+expected:
+  scene: scene_village_market_v1
+  formations:
+    - argument_2p
+  roles:
+    - focus
+    - target

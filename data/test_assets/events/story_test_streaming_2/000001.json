@@ -1,0 +1,27 @@
+{
+  "event_id": "fb921a58-b65c-43c4-985c-9d59c82836c0",
+  "event_type": "ManifestBuilt",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:56:53.032225Z",
+  "correlation_id": "story_test_streaming_2",
+  "sequence_number": 1,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Test",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "manifest": {
+      "story_id": "story_test_streaming_2",
+      "required_assets": [
+        "market_scene"
+      ],
+      "dependency_graph": [],
+      "warm_starts": [
+        "market_scene"
+      ]
+    }
+  }
+}

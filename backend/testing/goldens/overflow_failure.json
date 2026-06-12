@@ -1,0 +1,1002 @@
+[
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_0",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_0",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_0",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_0",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_1",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_1",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_1",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_1",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_2",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_2",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_2",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_2",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_3",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_3",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_3",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_3",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_4",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_4",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_4",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_4",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_5",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_5",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_5",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_5",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_6",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_6",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_6",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_6",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_7",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_7",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_7",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_7",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_8",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_8",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_8",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_8",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_9",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_9",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_9",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_9",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_10",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_10",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_10",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_10",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_11",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_11",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_11",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_11",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_12",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_12",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_12",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_12",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_13",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_13",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_13",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_13",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_14",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_14",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_14",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_14",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_15",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_15",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_15",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_15",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_16",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_16",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_16",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_16",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_17",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_17",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_17",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_17",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_18",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_18",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_18",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_18",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_19",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_19",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_19",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_19",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_20",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_20",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_20",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_20",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_21",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_21",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_21",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_21",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_22",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_22",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_22",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_22",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_23",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_23",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_23",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_23",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  },
+  {
+    "intent": "idle",
+    "intent_confidence": 1.0,
+    "actor": "actor_24",
+    "target": null,
+    "object": null,
+    "dramatic_weight": 0.3,
+    "composition": {
+      "focus_actor": "actor_24",
+      "secondary_actor": null,
+      "formation": "dialogue_2p",
+      "dominant_zone": null,
+      "emotional_tone": null
+    },
+    "blocking": [
+      {
+        "actor_id": "actor_24",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation"
+      }
+    ],
+    "resolved_blocking": [
+      {
+        "actor_id": "actor_24",
+        "spatial_role": "focus",
+        "anchor_intent": "scene_center",
+        "formation": "dialogue_2p",
+        "relationship": "conversation",
+        "resolved_anchor": "scene_center"
+      }
+    ],
+    "planner_reasoning": [
+      "Unknown intent idle, applying fallback staging.",
+      "Resolver: Mapped AnchorIntent.SCENE_CENTER to 'scene_center' (type: neutral_zone)."
+    ],
+    "planner_confidence": 0.5,
+    "dialogue_line": null
+  }
+]

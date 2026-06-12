@@ -1,0 +1,16 @@
+{
+  "event_id": "0b86eff8-e9c4-4f67-a03d-a3648e11f682",
+  "event_type": "AssetFailed",
+  "event_category": "system",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:05:15.640095Z",
+  "correlation_id": "test_missing_asset",
+  "sequence_number": 3,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Test",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

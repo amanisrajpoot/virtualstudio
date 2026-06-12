@@ -1,0 +1,16 @@
+{
+  "event_id": "71d34735-5780-428b-b5ec-c33508c87d9c",
+  "event_type": "BeatPlanned",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:42:03.397843Z",
+  "correlation_id": "test_overflow_failure",
+  "sequence_number": 86,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Planner",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

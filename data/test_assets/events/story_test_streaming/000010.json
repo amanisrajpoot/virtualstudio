@@ -1,0 +1,19 @@
+{
+  "event_id": "61ee99c7-d925-4436-a073-33df736cfdb3",
+  "event_type": "AssetRequested",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:56:52.767930Z",
+  "correlation_id": "story_test_streaming",
+  "sequence_number": 10,
+  "priority": "normal",
+  "metadata": {
+    "producer": "StreamingManager",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "asset_id": "missing_prop_123",
+    "session_id": "sess_9239db63"
+  }
+}

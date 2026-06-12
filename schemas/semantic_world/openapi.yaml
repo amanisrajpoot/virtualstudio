@@ -1,0 +1,244 @@
+openapi: 3.1.0
+info:
+  title: StoryForge Semantic World API
+  version: 1.0.0
+paths:
+  /worlds:
+    get:
+      summary: List semantic world definitions
+      responses:
+        "200":
+          description: Semantic worlds returned by scene asset ID.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/SemanticWorld"
+    post:
+      summary: Create a semantic world for a scene asset
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SemanticWorldCreate"
+      responses:
+        "201":
+          description: Semantic world created.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SemanticWorld"
+        "409":
+          description: Semantic world already exists.
+  /worlds/{scene_asset_id}:
+    get:
+      summary: Fetch one semantic world
+      parameters:
+        - $ref: "#/components/parameters/SceneAssetId"
+      responses:
+        "200":
+          description: Semantic world found.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SemanticWorld"
+        "404":
+          description: Semantic world not found.
+  /worlds/{scene_asset_id}/anchors:
+    get:
+      summary: List anchors for a scene
+      parameters:
+        - $ref: "#/components/parameters/SceneAssetId"
+      responses:
+        "200":
+          description: Scene anchors returned in deterministic order.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/SemanticAnchor"
+    post:
+      summary: Add an anchor to a scene world
+      parameters:
+        - $ref: "#/components/parameters/SceneAssetId"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SemanticAnchorCreate"
+      responses:
+        "201":
+          description: Anchor created.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SemanticAnchor"
+        "409":
+          description: Anchor already exists.
+        "422":
+          description: Anchor validation failed.
+  /worlds/{scene_asset_id}/anchors/{anchor}:
+    get:
+      summary: Fetch one scene-local anchor
+      parameters:
+        - $ref: "#/components/parameters/SceneAssetId"
+        - name: anchor
+          in: path
+          required: true
+          schema:
+            type: string
+            pattern: "^[a-z][a-z0-9_]*$"
+      responses:
+        "200":
+          description: Anchor found.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SemanticAnchor"
+        "404":
+          description: Anchor not found.
+  /worlds/{scene_asset_id}/resolve:
+    post:
+      summary: Validate and normalize an anchor reference
+      description: This endpoint does not return coordinates. Godot resolves valid references to Transform3D at runtime.
+      parameters:
+        - $ref: "#/components/parameters/SceneAssetId"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AnchorResolveRequest"
+      responses:
+        "200":
+          description: Normalized anchor resolution contract.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AnchorResolution"
+components:
+  parameters:
+    SceneAssetId:
+      name: scene_asset_id
+      in: path
+      required: true
+      schema:
+        type: string
+        pattern: "^scene_[a-z0-9_]+_v[0-9]+$"
+  schemas:
+    SemanticWorldCreate:
+      type: object
+      required: [scene_asset_id, version, metadata]
+      properties:
+        scene_asset_id:
+          type: string
+        version:
+          type: string
+          pattern: "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+          default: "1.0.0"
+        metadata:
+          type: object
+          additionalProperties: true
+          default: {}
+    SemanticWorld:
+      allOf:
+        - $ref: "#/components/schemas/SemanticWorldCreate"
+        - type: object
+          required: [created_at, updated_at]
+          properties:
+            created_at:
+              type: string
+              format: date-time
+            updated_at:
+              type: string
+              format: date-time
+    SemanticAnchorCreate:
+      type: object
+      required: [anchor, display_name, tags, metadata]
+      properties:
+        anchor:
+          type: string
+          pattern: "^[a-z][a-z0-9_]*$"
+        display_name:
+          type: string
+          minLength: 1
+        tags:
+          type: array
+          items:
+            type: string
+            pattern: "^[a-z][a-z0-9_]*$"
+          default: []
+        metadata:
+          type: object
+          additionalProperties: true
+          default: {}
+    SemanticAnchor:
+      allOf:
+        - $ref: "#/components/schemas/SemanticAnchorCreate"
+        - type: object
+          required: [scene_asset_id, created_at, updated_at]
+          properties:
+            scene_asset_id:
+              type: string
+            created_at:
+              type: string
+              format: date-time
+            updated_at:
+              type: string
+              format: date-time
+    AnchorResolveRequest:
+      type: object
+      required: [anchor]
+      properties:
+        anchor:
+          type: string
+          pattern: "^[a-z][a-z0-9_]*$"
+        relation:
+          type: string
+          enum: [at, near, left_of, right_of, in_front_of, behind, facing]
+          default: at
+        relative_to:
+          type:
+            - string
+            - "null"
+        distance:
+          type: string
+          enum: [contact, near, medium, far]
+          default: near
+        require_tags:
+          type: array
+          items:
+            type: string
+          default: []
+    AnchorResolution:
+      type: object
+      required: [scene_asset_id, anchor, relation, distance, valid, errors, lookup, runtime_reference]
+      properties:
+        scene_asset_id:
+          type: string
+        anchor:
+          type: string
+        relation:
+          type: string
+        relative_to:
+          type:
+            - string
+            - "null"
+        distance:
+          type: string
+        valid:
+          type: boolean
+        errors:
+          type: array
+          items:
+            type: string
+        lookup:
+          type: object
+          additionalProperties: true
+        runtime_reference:
+          type: object
+          additionalProperties: true

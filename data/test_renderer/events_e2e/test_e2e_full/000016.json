@@ -1,0 +1,18 @@
+{
+  "event_id": "6f45dca4-79a8-4150-9561-538eb82ad4fb",
+  "event_type": "ExportStarted",
+  "event_category": "system",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:11:07.201602Z",
+  "correlation_id": "test_e2e_full",
+  "sequence_number": 16,
+  "priority": "normal",
+  "metadata": {
+    "producer": "ExportManager",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "job_id": "job_b8da89e1"
+  }
+}

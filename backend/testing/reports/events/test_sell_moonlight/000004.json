@@ -1,0 +1,16 @@
+{
+  "event_id": "62045528-6ab9-4c2a-a8e5-9ec59c030b37",
+  "event_type": "BeatStaged",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:42:03.042125Z",
+  "correlation_id": "test_sell_moonlight",
+  "sequence_number": 4,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Solver",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

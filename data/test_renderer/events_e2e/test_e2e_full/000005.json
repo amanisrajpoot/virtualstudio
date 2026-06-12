@@ -1,0 +1,16 @@
+{
+  "event_id": "94ec5280-7fb6-4f61-a29e-c732932ccf97",
+  "event_type": "AssetReady",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:11:06.986105Z",
+  "correlation_id": "test_e2e_full",
+  "sequence_number": 5,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Test",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

@@ -1,0 +1,18 @@
+{
+  "event_id": "462a8807-b146-486b-bd4d-31a449ced1ac",
+  "event_type": "StorySubmitted",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:05:15.761757Z",
+  "correlation_id": "test_audio_retry",
+  "sequence_number": 1,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Test",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "story_id": "s1"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "event_id": "59efca69-4f13-4fc5-a87d-8f7dbffb29ce",
+  "event_type": "BeatStaged",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:42:03.348546Z",
+  "correlation_id": "test_overflow_failure",
+  "sequence_number": 56,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Solver",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

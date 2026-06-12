@@ -1,0 +1,18 @@
+{
+  "event_id": "919e6c0b-ec52-43dd-ac1e-7cb09a639fd4",
+  "event_type": "RenderStarted",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:05:15.429388Z",
+  "correlation_id": "test_render_success",
+  "sequence_number": 10,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Orchestrator",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "job_id": "job_55c991f3"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "event_id": "0bc1f14d-4fa6-4567-a044-983f30cccf0e",
+  "event_type": "RecordingCompleted",
+  "event_category": "system",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:11:06.771463Z",
+  "correlation_id": "test_godot_lifecycle",
+  "sequence_number": 4,
+  "priority": "normal",
+  "metadata": {
+    "producer": "GodotAdapter",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

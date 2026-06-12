@@ -1,0 +1,7 @@
+scenario_id: overflow_failure
+tags: [failure, solver]
+story: |
+  20 villagers occupy 5 slots.
+expected:
+  scene: scene_village_market_v1
+  solver_failure_expected: true

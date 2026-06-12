@@ -1,0 +1,6 @@
+scenario_id: quantum_portal
+tags: [failure, compiler]
+story: |
+  Halku opens a quantum portal.
+expected:
+  compiler_status: needs_clarification

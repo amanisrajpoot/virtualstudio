@@ -1,0 +1,19 @@
+{
+  "event_id": "ffc5fbd5-2e0d-4bc1-aba6-e534004bf428",
+  "event_type": "AssetRequested",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:56:52.772661Z",
+  "correlation_id": "story_test_streaming",
+  "sequence_number": 14,
+  "priority": "normal",
+  "metadata": {
+    "producer": "StreamingManager",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "asset_id": "market_ambient_audio",
+    "session_id": "sess_9239db63"
+  }
+}

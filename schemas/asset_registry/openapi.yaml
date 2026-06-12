@@ -1,0 +1,206 @@
+openapi: 3.1.0
+info:
+  title: StoryForge Asset Registry API
+  version: 1.0.0
+paths:
+  /assets:
+    get:
+      summary: Discover assets
+      parameters:
+        - name: type
+          in: query
+          schema:
+            $ref: "#/components/schemas/AssetType"
+        - name: q
+          in: query
+          schema:
+            type: string
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 500
+            default: 100
+        - name: offset
+          in: query
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+      responses:
+        "200":
+          description: Assets returned in deterministic type/name/version order.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Asset"
+    post:
+      summary: Register a versioned asset
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AssetCreate"
+      responses:
+        "201":
+          description: Asset registered.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Asset"
+        "409":
+          description: Asset ID or type/name/version already exists.
+        "422":
+          description: Asset validation failed.
+  /assets/validate:
+    post:
+      summary: Validate an asset payload without persisting it
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AssetCreate"
+      responses:
+        "200":
+          description: Validation result.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AssetValidationResult"
+  /assets/{asset_id}:
+    get:
+      summary: Fetch one asset by ID
+      parameters:
+        - name: asset_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Asset found.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Asset"
+        "404":
+          description: Asset not found.
+    patch:
+      summary: Update mutable asset fields
+      parameters:
+        - name: asset_id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AssetUpdate"
+      responses:
+        "200":
+          description: Asset updated.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Asset"
+        "404":
+          description: Asset not found.
+        "422":
+          description: Asset validation failed.
+    delete:
+      summary: Delete an asset
+      parameters:
+        - name: asset_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: Asset deleted.
+        "404":
+          description: Asset not found.
+components:
+  schemas:
+    AssetType:
+      type: string
+      enum:
+        - character
+        - scene
+        - prop
+        - animation
+        - voice
+        - camera
+        - intent
+    AssetCreate:
+      type: object
+      required: [id, type, name, version, metadata]
+      properties:
+        id:
+          type: string
+          pattern: "^[a-z][a-z0-9_]*_v[0-9]+$"
+        type:
+          $ref: "#/components/schemas/AssetType"
+        name:
+          type: string
+          minLength: 1
+        version:
+          type: string
+          pattern: "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+          default: "1.0.0"
+        path:
+          type:
+            - string
+            - "null"
+        metadata:
+          type: object
+          additionalProperties: true
+          default: {}
+    AssetUpdate:
+      type: object
+      additionalProperties: false
+      properties:
+        name:
+          type: string
+          minLength: 1
+        path:
+          type:
+            - string
+            - "null"
+        metadata:
+          type: object
+          additionalProperties: true
+    Asset:
+      allOf:
+        - $ref: "#/components/schemas/AssetCreate"
+        - type: object
+          required: [created_at, updated_at]
+          properties:
+            created_at:
+              type: string
+              format: date-time
+            updated_at:
+              type: string
+              format: date-time
+    AssetValidationResult:
+      type: object
+      required: [valid, errors, warnings]
+      properties:
+        valid:
+          type: boolean
+        errors:
+          type: array
+          items:
+            type: string
+        warnings:
+          type: array
+          items:
+            type: string

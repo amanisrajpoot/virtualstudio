@@ -1,0 +1,16 @@
+{
+  "event_id": "9f81e1e6-b8dc-459d-b121-0165ff8b78b6",
+  "event_type": "SceneResolved",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:42:03.040782Z",
+  "correlation_id": "test_sell_moonlight",
+  "sequence_number": 3,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Resolver",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

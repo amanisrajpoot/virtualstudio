@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://storyforge.local/schemas/actor_system/actor_state.schema.json",
+  "title": "StoryForge Actor State",
+  "type": "object",
+  "required": [
+    "id",
+    "emotion",
+    "energy",
+    "attention",
+    "inventory",
+    "current_anchor",
+    "machine_state"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$",
+      "examples": ["halku", "policeman"]
+    },
+    "emotion": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$",
+      "default": "neutral",
+      "examples": ["neutral", "happy", "angry", "suspicious"]
+    },
+    "energy": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "default": 100
+    },
+    "attention": {
+      "type": "string",
+      "default": "",
+      "description": "Actor ID or anchor currently receiving attention."
+    },
+    "inventory": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_]*$"
+      },
+      "default": []
+    },
+    "current_anchor": {
+      "type": "string",
+      "pattern": "^$|^[a-z][a-z0-9_]*$",
+      "description": "Scene-local anchor ID for the actor's last completed semantic position."
+    },
+    "machine_state": {
+      "type": "string",
+      "enum": ["idle", "walk", "talk", "run", "interact"],
+      "default": "idle"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "tea_stall",
+  "name": "Tea Stall",
+  "archetype": "commercial",
+  "description": "A local gathering spot for chai and discussion.",
+  "zones": [
+    {
+      "id": "bench",
+      "name": "Wooden Bench",
+      "zone_type": "seating",
+      "capacity": 3,
+      "adjacent": [
+        "counter"
+      ]
+    }
+  ],
+  "formations": [
+    {
+      "formation_id": "ARGUMENT",
+      "supported_zone_types": [
+        "seating"
+      ]
+    }
+  ],
+  "props": [
+    {
+      "prop_id": "chai_glasses",
+      "required": true
+    }
+  ],
+  "ambience": {
+    "time_of_day": "morning",
+    "weather": "clear",
+    "crowd_density": 0.5,
+    "noise_profile": "chatter"
+  },
+  "connected_worlds": [
+    {
+      "target_world": "village_market",
+      "connection_type": "adjacent"
+    }
+  ]
+}

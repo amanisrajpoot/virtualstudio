@@ -1,0 +1,14 @@
+scenario_id: sell_moonlight
+tags: [smoke, regression, dialogue]
+story: |
+  Halku sells moonlight.
+  Policeman becomes suspicious.
+expected:
+  scene: scene_village_market_v1
+  formations:
+    - selling
+  intents:
+    - sell_product
+  roles:
+    - seller
+    - customer

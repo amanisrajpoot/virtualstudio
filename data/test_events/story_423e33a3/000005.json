@@ -1,0 +1,22 @@
+{
+  "event_id": "9b42fed9-d98e-4c48-bfd6-40a65c2d7ef6",
+  "event_type": "ReplayStarted",
+  "event_category": "system",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T15:34:10.337918Z",
+  "correlation_id": "story_423e33a3",
+  "sequence_number": 5,
+  "priority": "normal",
+  "metadata": {
+    "producer": "EventReplayer",
+    "tags": [
+      "system",
+      "replay"
+    ],
+    "headers": {}
+  },
+  "payload": {
+    "mode": "full",
+    "count": 4
+  }
+}

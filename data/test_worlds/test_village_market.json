@@ -1,0 +1,59 @@
+{
+  "id": "test_village_market",
+  "name": "Test Village Market",
+  "archetype": "commercial",
+  "description": "A bustling rural market.",
+  "zones": [
+    {
+      "id": "market_stall",
+      "name": "Market Stall",
+      "zone_type": "selling_zone",
+      "capacity": 2,
+      "adjacent": [
+        "road"
+      ]
+    },
+    {
+      "id": "road",
+      "name": "Main Road",
+      "zone_type": "transit",
+      "capacity": 5,
+      "adjacent": [
+        "tea_stall"
+      ]
+    },
+    {
+      "id": "tea_stall",
+      "name": "Tea Stall",
+      "zone_type": "gathering",
+      "capacity": 5,
+      "adjacent": []
+    }
+  ],
+  "formations": [
+    {
+      "formation_id": "SELLING",
+      "supported_zone_types": [
+        "selling_zone"
+      ]
+    }
+  ],
+  "props": [
+    {
+      "prop_id": "vegetable_cart",
+      "required": true
+    }
+  ],
+  "ambience": {
+    "time_of_day": "day",
+    "weather": "clear",
+    "crowd_density": 0.5,
+    "noise_profile": "ambient"
+  },
+  "connected_worlds": [
+    {
+      "target_world": "test_village_street",
+      "connection_type": "road_connected"
+    }
+  ]
+}

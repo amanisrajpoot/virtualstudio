@@ -1,0 +1,19 @@
+{
+  "event_id": "d134fde5-722b-40ef-9e04-612ae770e2a4",
+  "event_type": "AudioCached",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:49:00.837722Z",
+  "correlation_id": "story_test_audio",
+  "sequence_number": 6,
+  "priority": "normal",
+  "metadata": {
+    "producer": "VoiceEngine",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "asset_id": "aud_c737d9d0",
+    "duration_ms": 1800
+  }
+}

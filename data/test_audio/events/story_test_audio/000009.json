@@ -1,0 +1,19 @@
+{
+  "event_id": "73a7ec48-f3dd-4a94-8967-96a5bc5a4ead",
+  "event_type": "AudioRequested",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:49:00.877909Z",
+  "correlation_id": "story_test_audio",
+  "sequence_number": 9,
+  "priority": "normal",
+  "metadata": {
+    "producer": "VoiceEngine",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "text": "Testing",
+    "actor_id": "char_unknown"
+  }
+}

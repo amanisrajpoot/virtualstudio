@@ -1,0 +1,18 @@
+{
+  "event_id": "0c749144-4028-4dcf-9510-cf74be1b3d3c",
+  "event_type": "IntentMapped",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:42:03.274253Z",
+  "correlation_id": "test_overflow_failure",
+  "sequence_number": 1,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Compiler",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "intent": "idle"
+  }
+}

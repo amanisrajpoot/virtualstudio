@@ -1,0 +1,19 @@
+{
+  "event_id": "7744351c-3d74-49aa-8f09-7182b01e56d1",
+  "event_type": "DialogueGenerated",
+  "event_category": "domain",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T16:49:00.687854Z",
+  "correlation_id": "story_test_audio",
+  "sequence_number": 1,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Test",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "text": "Kya bech raha hai?",
+    "actor_id": "char_policeman_v1"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "event_id": "d205f45e-1780-4f67-b402-095690936379",
+  "event_type": "SceneConstructed",
+  "event_category": "system",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:11:07.044620Z",
+  "correlation_id": "test_e2e_full",
+  "sequence_number": 12,
+  "priority": "normal",
+  "metadata": {
+    "producer": "GodotAdapter",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {}
+}

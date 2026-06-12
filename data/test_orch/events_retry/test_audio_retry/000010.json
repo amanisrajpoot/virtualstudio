@@ -1,0 +1,19 @@
+{
+  "event_id": "b6728d06-62d6-456d-8b2f-774fb27cbecf",
+  "event_type": "RenderFailed",
+  "event_category": "system",
+  "event_version": "1.0",
+  "timestamp": "2026-06-12T17:05:15.982202Z",
+  "correlation_id": "test_audio_retry",
+  "sequence_number": 10,
+  "priority": "normal",
+  "metadata": {
+    "producer": "Orchestrator",
+    "tags": [],
+    "headers": {}
+  },
+  "payload": {
+    "job_id": "job_6e9c7200",
+    "reason": "Audio generation failed after 3 retries."
+  }
+}
