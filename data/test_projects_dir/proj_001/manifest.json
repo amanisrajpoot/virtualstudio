@@ -1,0 +1,28 @@
+{
+  "project_id": "proj_001",
+  "name": "Village Comedy",
+  "description": "A hilarious interaction at the market.",
+  "story_ids": [
+    "story_1"
+  ],
+  "character_ids": [
+    "halku",
+    "policeman"
+  ],
+  "world_ids": [
+    "market"
+  ],
+  "active_story_id": "story_1",
+  "active_snapshot_version": 2,
+  "graph_version": 2,
+  "revisions": [
+    {
+      "revision_id": "rev_2",
+      "graph_version": 2,
+      "summary": "Added Policeman chase sequence",
+      "timestamp": "2026-06-13T22:08:42.055408"
+    }
+  ],
+  "created_at": "2026-06-13T22:08:42.032795",
+  "updated_at": "2026-06-13T22:08:42.032993"
+}

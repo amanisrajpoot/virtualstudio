@@ -1,0 +1,11 @@
+{
+  "story_id": "test_inc_1",
+  "graph_version": 1,
+  "compiled_nodes": [
+    "beat_1",
+    "beat_2",
+    "beat_3"
+  ],
+  "health_score": 100,
+  "timestamp": "2026-06-13T21:59:11.200571"
+}

@@ -1,0 +1,36 @@
+{"event": "COMPILATION_STARTED", "timestamp": 1781368150.990143, "data": {"story_id": "test_inc_1"}}
+{"event": "CACHE_MISS", "timestamp": 1781368150.9943237, "data": {"node_id": "beat_1", "reason": "content_changed"}}
+{"event": "NODE_RECOMPILED", "timestamp": 1781368150.9957364, "data": {"node_id": "beat_1"}}
+{"event": "CACHE_MISS", "timestamp": 1781368151.0013318, "data": {"node_id": "beat_2", "reason": "content_changed"}}
+{"event": "NODE_RECOMPILED", "timestamp": 1781368151.002033, "data": {"node_id": "beat_2"}}
+{"event": "CACHE_MISS", "timestamp": 1781368151.0047317, "data": {"node_id": "beat_3", "reason": "content_changed"}}
+{"event": "NODE_RECOMPILED", "timestamp": 1781368151.0056055, "data": {"node_id": "beat_3"}}
+{"event": "COMPILATION_COMPLETED", "timestamp": 1781368151.0123196, "data": {"story_id": "test_inc_1", "nodes_recompiled": 3, "nodes_reused": 0, "cache_hit_rate": 0.0, "top_invalidation_cause": "content_changed"}}
+{"event": "COMPILATION_STARTED", "timestamp": 1781368151.0133824, "data": {"story_id": "test_inc_1"}}
+{"event": "CACHE_HIT", "timestamp": 1781368151.0729868, "data": {"node_id": "beat_1"}}
+{"event": "CACHE_HIT", "timestamp": 1781368151.0966015, "data": {"node_id": "beat_2"}}
+{"event": "CACHE_HIT", "timestamp": 1781368151.1180637, "data": {"node_id": "beat_3"}}
+{"event": "COMPILATION_COMPLETED", "timestamp": 1781368151.1437483, "data": {"story_id": "test_inc_1", "nodes_recompiled": 0, "nodes_reused": 3, "cache_hit_rate": 100.0, "top_invalidation_cause": "none"}}
+{"event": "COMPILATION_STARTED", "timestamp": 1781368151.1445975, "data": {"story_id": "test_inc_1"}}
+{"event": "CACHE_HIT", "timestamp": 1781368151.1688607, "data": {"node_id": "beat_1"}}
+{"event": "CACHE_MISS", "timestamp": 1781368151.191631, "data": {"node_id": "beat_2", "reason": "content_changed"}}
+{"event": "NODE_RECOMPILED", "timestamp": 1781368151.1923323, "data": {"node_id": "beat_2"}}
+{"event": "CACHE_MISS", "timestamp": 1781368151.196157, "data": {"node_id": "beat_3", "reason": "content_changed"}}
+{"event": "NODE_RECOMPILED", "timestamp": 1781368151.1971073, "data": {"node_id": "beat_3"}}
+{"event": "COMPILATION_COMPLETED", "timestamp": 1781368151.2013388, "data": {"story_id": "test_inc_1", "nodes_recompiled": 2, "nodes_reused": 1, "cache_hit_rate": 33.33333333333333, "top_invalidation_cause": "content_changed"}}
+{"event": "COMPILATION_STARTED", "timestamp": 1781368151.203147, "data": {"story_id": "test_inc_1"}}
+{"event": "CACHE_MISS", "timestamp": 1781368151.2220075, "data": {"node_id": "beat_1", "reason": "override_changed"}}
+{"event": "NODE_RECOMPILED", "timestamp": 1781368151.2226393, "data": {"node_id": "beat_1"}}
+{"event": "CACHE_MISS", "timestamp": 1781368151.2256415, "data": {"node_id": "beat_2", "reason": "content_changed"}}
+{"event": "NODE_RECOMPILED", "timestamp": 1781368151.2264686, "data": {"node_id": "beat_2"}}
+{"event": "CACHE_MISS", "timestamp": 1781368151.2323968, "data": {"node_id": "beat_3", "reason": "content_changed"}}
+{"event": "NODE_RECOMPILED", "timestamp": 1781368151.2333734, "data": {"node_id": "beat_3"}}
+{"event": "COMPILATION_COMPLETED", "timestamp": 1781368151.2387786, "data": {"story_id": "test_inc_1", "nodes_recompiled": 3, "nodes_reused": 0, "cache_hit_rate": 0.0, "top_invalidation_cause": "content_changed"}}
+{"event": "COMPILATION_STARTED", "timestamp": 1781368151.2472234, "data": {"story_id": "evict_test"}}
+{"event": "CACHE_MISS", "timestamp": 1781368151.249279, "data": {"node_id": "beat_1", "reason": "content_changed"}}
+{"event": "NODE_RECOMPILED", "timestamp": 1781368151.250137, "data": {"node_id": "beat_1"}}
+{"event": "CACHE_MISS", "timestamp": 1781368151.2544043, "data": {"node_id": "beat_2", "reason": "content_changed"}}
+{"event": "NODE_RECOMPILED", "timestamp": 1781368151.2551231, "data": {"node_id": "beat_2"}}
+{"event": "CACHE_MISS", "timestamp": 1781368151.2589004, "data": {"node_id": "beat_3", "reason": "content_changed"}}
+{"event": "NODE_RECOMPILED", "timestamp": 1781368151.2625813, "data": {"node_id": "beat_3"}}
+{"event": "COMPILATION_COMPLETED", "timestamp": 1781368151.3241582, "data": {"story_id": "evict_test", "nodes_recompiled": 3, "nodes_reused": 0, "cache_hit_rate": 0.0, "top_invalidation_cause": "content_changed"}}

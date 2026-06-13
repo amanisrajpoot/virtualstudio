@@ -1,0 +1,21 @@
+{
+  "fingerprint": "36b2f98d910c8613d61d3ded58a9ea5f468f7db3e0b86bd49ea8066fb133d1b0",
+  "graph_node_data": {
+    "id": "beat_2",
+    "intent": "ACTION",
+    "beat_type": "action",
+    "dialogue": "Edited Beat 2",
+    "formation": "face_to_face",
+    "zone": "default",
+    "confidence": 100.0,
+    "status": "generated",
+    "next_nodes": [
+      "beat_3"
+    ]
+  },
+  "metadata": {
+    "created_at": "2026-06-13T21:59:11.227648",
+    "last_accessed": "2026-06-13T21:59:11.227666",
+    "hit_count": 0
+  }
+}

@@ -1,0 +1,9 @@
+[
+  {
+    "node_id": "beat_1",
+    "story_id": "test_inc_1",
+    "original_intent": "ACTION",
+    "overridden_intent": "NEGOTIATE",
+    "timestamp": "now"
+  }
+]

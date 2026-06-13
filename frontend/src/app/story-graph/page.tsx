@@ -14,13 +14,21 @@ const DEMO_CHARS = ["halku", "policeman"];
 
 const CustomBeatNode = ({ data }: any) => {
   const isOverridden = data.status === "overridden";
+  const isDirty = data.status === "dirty";
   const isLowConfidence = data.confidence < 80;
   
   return (
-    <div className={`bg-white rounded-lg border-2 p-4 w-64 shadow-sm relative ${
-      isOverridden ? 'border-blue-500' : isLowConfidence ? 'border-amber-400' : 'border-slate-200'
+    <div className={`bg-white rounded-lg border-2 p-4 w-64 shadow-sm relative transition-colors duration-300 ${
+      isDirty ? 'border-orange-500 bg-orange-50' :
+      isOverridden ? 'border-blue-500' : 
+      isLowConfidence ? 'border-amber-400' : 'border-slate-200'
     }`}>
-      {isOverridden && (
+      {isDirty && (
+        <div className="absolute -top-3 right-2 bg-orange-500 text-white text-[10px] px-2 py-0.5 rounded-full font-bold flex items-center shadow-sm">
+          <Activity size={10} className="mr-1"/> DIRTY
+        </div>
+      )}
+      {isOverridden && !isDirty && (
         <div className="absolute -top-3 right-2 bg-blue-500 text-white text-[10px] px-2 py-0.5 rounded-full font-bold flex items-center shadow-sm">
           <RefreshCw size={10} className="mr-1"/> OVERRIDDEN
         </div>

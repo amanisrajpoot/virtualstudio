@@ -98,6 +98,128 @@ export async function fetchArchetypes() {
   return res.json();
 }
 
+// --- Projects ---
+export async function fetchProjectsList() {
+  const res = await fetch(`${API_BASE}/projects`);
+  return res.json();
+}
+
+export async function createProject(data: any) {
+  const res = await fetch(`${API_BASE}/projects`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+  return res.json();
+}
+
+export async function saveProjectSnapshot(projectId: string, data: any) {
+  const res = await fetch(`${API_BASE}/projects/${projectId}/snapshot`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+  return res.json();
+}
+
+// --- Collaboration ---
+export async function fetchMockUsers() {
+  const res = await fetch(`${API_BASE}/auth/users`);
+  return res.json();
+}
+
+export async function fetchComments(projectId: string) {
+  const res = await fetch(`${API_BASE}/projects/${projectId}/comments`);
+  return res.json();
+}
+
+export async function addComment(projectId: string, data: any) {
+  const res = await fetch(`${API_BASE}/projects/${projectId}/comments`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+  return res.json();
+}
+
+export async function resolveComment(projectId: string, commentId: string, userId: string) {
+  const res = await fetch(`${API_BASE}/projects/${projectId}/comments/${commentId}/resolve`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ user_id: userId }),
+  });
+  return res.json();
+}
+
+export async function approveRevision(projectId: string, revisionId: string, userId: string) {
+  const res = await fetch(`${API_BASE}/projects/${projectId}/revisions/${revisionId}/approve`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ user_id: userId }),
+  });
+  return res.json();
+}
+
+// --- Render Queue ---
+export async function fetchRenderJobs() {
+  const res = await fetch(`${API_BASE}/render/jobs`);
+  return res.json();
+}
+
+export async function fetchRenderMetrics() {
+  const res = await fetch(`${API_BASE}/render/metrics`);
+  return res.json();
+}
+
+export async function submitRenderJob(data: any) {
+  const res = await fetch(`${API_BASE}/render/jobs`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+  return res.json();
+}
+
+// --- Marketplace ---
+export async function fetchMarketplaceAssets(query: string = "") {
+  const res = await fetch(`${API_BASE}/marketplace/assets${query}`);
+  return res.json();
+}
+
+export async function publishMarketplaceAsset(data: any) {
+  const res = await fetch(`${API_BASE}/marketplace/publish`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+  return res.json();
+}
+
+export async function forkMarketplaceAsset(assetId: string, authorId: string) {
+  const res = await fetch(`${API_BASE}/marketplace/fork`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ asset_id: assetId, author_id: authorId }),
+  });
+  return res.json();
+}
+
+export async function rateMarketplaceAsset(assetId: string, userId: string, score: number) {
+  const res = await fetch(`${API_BASE}/marketplace/assets/${assetId}/rate`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ user_id: userId, score }),
+  });
+  return res.json();
+}
+
+export async function downloadMarketplaceAsset(assetId: string) {
+  const res = await fetch(`${API_BASE}/marketplace/assets/${assetId}/download`, {
+    method: "POST",
+  });
+  return res.json();
+}
+
 export async function generateSkeleton(data: any) {
   const res = await fetch(`${API_BASE}/stories/generate-skeleton`, {
     method: "POST",

@@ -1,0 +1,25 @@
+{
+  "project_id": "proj_collab_1",
+  "name": "Collaboration Test",
+  "description": "Testing approvals",
+  "story_ids": [],
+  "character_ids": [],
+  "world_ids": [],
+  "active_story_id": null,
+  "active_snapshot_version": 1,
+  "graph_version": 1,
+  "revisions": [],
+  "members": [],
+  "approvals": [
+    {
+      "revision_id": "rev_1",
+      "required_approvals": 2,
+      "approved_by": [
+        "reviewer_1"
+      ],
+      "status": "reviewed"
+    }
+  ],
+  "created_at": "2026-06-13T22:21:26.634800",
+  "updated_at": "2026-06-13T22:21:26.634850"
+}

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { fetchMetrics, fetchFailures, fetchStoryHealth } from "@/lib/api";
-import { Activity, AlertTriangle, CheckCircle2, HeartPulse, Clock, Database, Search } from "lucide-react";
+import { Activity, AlertTriangle, CheckCircle, Clock, Zap, Target, Box, History, FileWarning, Cpu, Database, Search, HeartPulse, CheckCircle2 } from "lucide-react";
 
 export default function DiagnosticsPage() {
   const [metrics, setMetrics] = useState<any>(null);
@@ -33,7 +33,7 @@ export default function DiagnosticsPage() {
 
       {/* Metrics Row */}
       {metrics && (
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-4 mb-8">
           <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center justify-center">
             <span className="text-sm font-bold text-slate-500 uppercase">Stories Created</span>
             <span className="text-4xl font-bold text-slate-800 mt-2">{metrics.funnel.stories_created}</span>
@@ -46,9 +46,68 @@ export default function DiagnosticsPage() {
             <span className="text-sm font-bold text-slate-500 uppercase">Renders Started</span>
             <span className="text-4xl font-bold text-emerald-600 mt-2">{metrics.funnel.renders_started}</span>
           </div>
-          <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center justify-center">
-            <span className="text-sm font-bold text-slate-500 uppercase">Preview Hit Rate</span>
-            <span className="text-4xl font-bold text-blue-500 mt-2">{metrics.cache.preview_cache_hit_rate.toFixed(1)}%</span>
+          <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center">
+            <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mr-4">
+              <CheckCircle size={20} className="text-green-600" />
+            </div>
+            <div>
+              <div className="text-sm font-bold text-slate-500">Preview Cache Hits</div>
+              <div className="text-2xl font-bold text-slate-800">
+                {metrics["CACHE_HIT"] || 0}
+              </div>
+            </div>
+          </div>
+          
+          <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center">
+            <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center mr-4">
+              <Cpu size={20} className="text-purple-600" />
+            </div>
+            <div>
+              <div className="text-sm font-bold text-slate-500">Nodes Recompiled</div>
+              <div className="text-2xl font-bold text-slate-800">
+                {metrics["NODE_RECOMPILED"] || 0}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* COMPILATION SAVINGS WIDGET */}
+      {metrics && (
+        <div className="bg-white rounded-xl border border-slate-200 shadow-sm mb-8 p-6">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-lg font-bold text-slate-800 flex items-center">
+              <Database size={18} className="mr-2 text-indigo-500" />
+              Semantic Build System Metrics
+            </h2>
+            <div className="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-xs font-bold">
+              Subsystem 26 Active
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-3 gap-6">
+            <div className="bg-slate-50 p-4 rounded border border-slate-100">
+              <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Cache Hit Rate</div>
+              <div className="text-3xl font-bold text-emerald-500">
+                {metrics["COMPILATION_COMPLETED"] ? 
+                  ((metrics["CACHE_HIT"] || 0) / ((metrics["CACHE_HIT"] || 0) + (metrics["NODE_RECOMPILED"] || 1)) * 100).toFixed(1) : "0.0"}%
+              </div>
+            </div>
+            
+            <div className="bg-slate-50 p-4 rounded border border-slate-100">
+              <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Avg Nodes Recompiled</div>
+              <div className="text-3xl font-bold text-slate-700">
+                {metrics["COMPILATION_COMPLETED"] ? 
+                  ((metrics["NODE_RECOMPILED"] || 0) / metrics["COMPILATION_COMPLETED"]).toFixed(1) : "0.0"}
+              </div>
+            </div>
+
+            <div className="bg-slate-50 p-4 rounded border border-slate-100">
+               <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Total Savings</div>
+               <div className="text-3xl font-bold text-indigo-600">
+                 {metrics["CACHE_HIT"] || 0} <span className="text-sm text-slate-500 font-normal">nodes reused</span>
+               </div>
+            </div>
           </div>
         </div>
       )}

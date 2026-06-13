@@ -1,0 +1,7 @@
+{"job_id": "job_10", "status": "queued", "worker_id": null, "timestamp": "2026-06-13T22:38:57.611510"}
+{"job_id": "job_10", "status": "assigned", "worker_id": "w_001", "timestamp": "2026-06-13T22:38:57.614889"}
+{"job_id": "job_10", "status": "queued", "worker_id": null, "timestamp": "2026-06-13T22:38:57.616207"}
+{"job_id": "job_10", "status": "assigned", "worker_id": "w_001", "timestamp": "2026-06-13T22:38:57.617416"}
+{"job_id": "job_10", "status": "queued", "worker_id": null, "timestamp": "2026-06-13T22:38:57.618546"}
+{"job_id": "job_10", "status": "assigned", "worker_id": "w_001", "timestamp": "2026-06-13T22:38:57.619605"}
+{"job_id": "job_10", "status": "failed", "worker_id": null, "timestamp": "2026-06-13T22:38:57.620758"}

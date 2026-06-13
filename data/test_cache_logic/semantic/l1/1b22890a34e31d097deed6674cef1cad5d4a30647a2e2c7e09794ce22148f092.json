@@ -1,0 +1,21 @@
+{
+  "fingerprint": "1b22890a34e31d097deed6674cef1cad5d4a30647a2e2c7e09794ce22148f092",
+  "graph_node_data": {
+    "id": "beat_1",
+    "intent": "NEGOTIATE",
+    "beat_type": "action",
+    "dialogue": "Beat 1",
+    "formation": "face_to_face",
+    "zone": "default",
+    "confidence": 70.0,
+    "status": "overridden",
+    "next_nodes": [
+      "beat_2"
+    ]
+  },
+  "metadata": {
+    "created_at": "2026-06-13T21:59:11.223194",
+    "last_accessed": "2026-06-13T21:59:11.223201",
+    "hit_count": 0
+  }
+}

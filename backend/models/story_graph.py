@@ -8,6 +8,7 @@ class NodeStatus(str, Enum):
     GENERATED = "generated"
     OVERRIDDEN = "overridden"
     LOCKED = "locked"
+    DIRTY = "dirty"
 
 class BeatNode(BaseModel):
     id: str

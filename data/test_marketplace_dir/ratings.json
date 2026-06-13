@@ -1,0 +1,20 @@
+[
+  {
+    "asset_id": "5162a9ad-ee83-43be-97d8-6ed5003336c3",
+    "user_id": "user_1",
+    "score": 5,
+    "timestamp": "2026-06-13T23:12:12.169445"
+  },
+  {
+    "asset_id": "5162a9ad-ee83-43be-97d8-6ed5003336c3",
+    "user_id": "user_2",
+    "score": 4,
+    "timestamp": "2026-06-13T23:12:12.183491"
+  },
+  {
+    "asset_id": "5162a9ad-ee83-43be-97d8-6ed5003336c3",
+    "user_id": "user_3",
+    "score": 5,
+    "timestamp": "2026-06-13T23:12:12.205305"
+  }
+]

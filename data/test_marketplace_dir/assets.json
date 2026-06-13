@@ -1,0 +1,89 @@
+[
+  {
+    "asset_id": "5162a9ad-ee83-43be-97d8-6ed5003336c3",
+    "asset_type": "character",
+    "source_id": "char_mock_1",
+    "title": "Halku",
+    "description": "A clever farmer. Now with better clothes.",
+    "author_id": "user_alpha",
+    "tags": [
+      "comedy",
+      "villager"
+    ],
+    "versions": [
+      {
+        "version": 1,
+        "summary": "Initial Publish",
+        "timestamp": "2026-06-13T23:12:12.146123"
+      },
+      {
+        "version": 2,
+        "summary": "Fixed appearance",
+        "timestamp": "2026-06-13T23:12:12.223418"
+      }
+    ],
+    "downloads": 3,
+    "forks": 1,
+    "rating": 4.67,
+    "rating_count": 3,
+    "health_score": 90,
+    "compatibility_score": 0.0,
+    "featured": false,
+    "lineage": {
+      "root_asset_id": "5162a9ad-ee83-43be-97d8-6ed5003336c3",
+      "parent_asset_id": null,
+      "depth": 0
+    },
+    "compatible_worlds": [],
+    "compatible_formations": [],
+    "compatible_goals": [
+      "SELL_PRODUCT"
+    ],
+    "required_assets": [
+      "Village Base Voice"
+    ],
+    "created_at": "2026-06-13T23:12:12.146123",
+    "updated_at": "2026-06-13T23:12:12.223418"
+  },
+  {
+    "asset_id": "e6b78dae-6894-4642-8053-9fc637adfcfa",
+    "asset_type": "character",
+    "source_id": "1df60fb5-e8aa-49ab-bf77-6a13cb9c05d9",
+    "title": "Halku (Fork)",
+    "description": "Fork of Halku",
+    "author_id": "user_beta",
+    "tags": [
+      "comedy",
+      "villager"
+    ],
+    "versions": [
+      {
+        "version": 1,
+        "summary": "Forked",
+        "timestamp": "2026-06-13T23:12:12.157917"
+      }
+    ],
+    "downloads": 0,
+    "forks": 0,
+    "rating": 0.0,
+    "rating_count": 0,
+    "health_score": 90,
+    "compatibility_score": 0.0,
+    "featured": false,
+    "lineage": {
+      "root_asset_id": "5162a9ad-ee83-43be-97d8-6ed5003336c3",
+      "parent_asset_id": "5162a9ad-ee83-43be-97d8-6ed5003336c3",
+      "depth": 1
+    },
+    "compatible_worlds": [],
+    "compatible_formations": [],
+    "compatible_goals": [
+      "SELL_PRODUCT"
+    ],
+    "required_assets": [
+      "Village Base Voice"
+    ],
+    "created_at": "2026-06-13T23:12:12.157917",
+    "updated_at": "2026-06-13T23:12:12.157917"
+  }
+]

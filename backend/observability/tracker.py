@@ -61,6 +61,17 @@ class TelemetryTracker:
         with open(self.failures_file, 'w') as f:
             json.dump([x.model_dump() for x in failures], f, indent=2)
 
+    def track_event(self, event_type: str, data: dict):
+        # Very simple mock event sink for V1 incremental compilation tests
+        path = os.path.join(self.data_dir, "events_log.jsonl")
+        try:
+            payload = {"event": event_type, "timestamp": time.time(), "data": data}
+            with open(path, 'a') as f:
+                f.write(json.dumps(payload) + "\n")
+        except Exception:
+            pass
+
+
     def record_cache(self, cache_name: str, hit: bool):
         metrics = self.get_cache_metrics()
         

@@ -1,0 +1,26 @@
+{
+  "id": "char_mock_1",
+  "name": "Halku",
+  "archetype": "Farmer",
+  "tags": [],
+  "voice_profile": {
+    "provider": "elevenlabs",
+    "profile_id": "v1",
+    "language": "en"
+  },
+  "behavior": {
+    "talkative": 0.5,
+    "aggressive": 0.5,
+    "energetic": 0.5,
+    "greedy": 0.5,
+    "curious": 0.5
+  },
+  "speech_style": "Clever",
+  "appearance": {
+    "description": "Farmer",
+    "concept_images": [],
+    "selected_concept": null,
+    "asset_id": null
+  },
+  "relationships": []
+}

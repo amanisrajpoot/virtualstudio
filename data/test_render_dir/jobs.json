@@ -1,0 +1,44 @@
+[
+  {
+    "job_id": "job_1",
+    "project_id": "p1",
+    "snapshot_version": 1,
+    "approval_status": "approved",
+    "status": "queued",
+    "submitted_by": "u1",
+    "organization_id": null,
+    "submitted_at": "2026-06-13T22:38:57.585917",
+    "priority": 1,
+    "retry_count": 0,
+    "max_retries": 3,
+    "worker_id": null
+  },
+  {
+    "job_id": "job_10",
+    "project_id": "p1",
+    "snapshot_version": 1,
+    "approval_status": "approved",
+    "status": "failed",
+    "submitted_by": "u1",
+    "organization_id": null,
+    "submitted_at": "2026-06-13T22:38:57.596367",
+    "priority": 10,
+    "retry_count": 3,
+    "max_retries": 3,
+    "worker_id": null
+  },
+  {
+    "job_id": "job_5",
+    "project_id": "p1",
+    "snapshot_version": 1,
+    "approval_status": "approved",
+    "status": "completed",
+    "submitted_by": "u1",
+    "organization_id": null,
+    "submitted_at": "2026-06-13T22:38:57.606657",
+    "priority": 5,
+    "retry_count": 0,
+    "max_retries": 3,
+    "worker_id": null
+  }
+]
